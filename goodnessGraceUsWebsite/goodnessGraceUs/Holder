@@ -1,0 +1,57 @@
+<p align="center">
+    <strong><u>Menu Details</u></strong>
+</p>
+<p>
+    Soups/Salads:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Hors D’oeuvres:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Vegetables/Sides:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Pastas:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Meats:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Seafood:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Desserts/Bread:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Beverages:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>
+<p>
+    Customizable Self-Serve Stations:
+<div class="form-group">
+<input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+</div>
+</p>

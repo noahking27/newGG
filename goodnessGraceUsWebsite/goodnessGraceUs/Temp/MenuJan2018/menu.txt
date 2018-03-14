@@ -1,0 +1,161 @@
+Catering Menu
+
+
+%Soups
+BROCCOLI AND CHEDDAR
+CHICKEN NOODLE
+CHICKEN PARM
+POTATO
+VEGETABLE
+
+%Salads
+CAESAR SALAD
+GREEK SALAD
+HOUSE SALAD
+MACARONI SALAD
+PASTA SALAD
+WALDORF SALAD
+
+%Hors D’oeuvres
+ANTI PASTA TRAY
+ASSORTED CHEESE AND FRUIT TRAY
+ASSORTED MEAT TRAY
+ASSORTED VEGETABLE TRAY
+BREADED MOZARELLA
+BRUSCHETTA CROSTINI
+BUFFALO CHICKEN DIP Served with pita chips or crostini
+CHICKEN SALAD IN PHYLLO CUPS OR ON CROISSANTS
+CHICKEN WINGS (various flavors)
+COCKTAIL FRANKS
+COCKTAIL MEATBALLS
+CRAB DIP Served with pita chips or crostini
+CHICKEN & WAFFLES
+GRILLED THAI SPICE CHICKEN SLIDERS
+HAMBURGER SLIDERS BRISKET SLIDERS
+ITALIAN SAUSAGE IN MARINARA
+RAW OR STEAMED SHRIMP COCKTAIL
+SHRIMP & GRITS
+QUESADILLAS (chicken or cheese)
+
+
+
+%VEGETABLES/SIDES
+BAKED APPLES
+BAKED BEANS (veggie or country style)
+BAKED MAC & CHEESE
+BAKED POTATOES
+BOILED NEW POTATOES
+CABBAGE
+COLE SLAW
+GARLIC MASHED POTATOES
+GRILLED ASPARAGUS
+JAMBALAYA
+PINTO BEANS
+POTATO SALAD
+RICE (pilaf, jasmine or Spanish)
+ROASTED VEGETABLES
+ROASTED RED SKIN POTATOES WITH HERB SEASONING
+SOUTHERN COLLARD GREENS
+SPAGHETTI
+STEAMED VEGETABLES
+STIR FRY RICE
+STRING BEANS
+SWEET POTATO SOUFFLE WITH A PECAN CRUMB TOPPING
+TWICE BAKED POTATOS
+
+%PASTAS
+BAKED SPAGHETTI
+BAKED ZITI
+CHICKEN AND BROCCOLI ALFREDO
+FETTUCCINE ALFREDO
+LASAGNA (meat or vegetable)
+LOBSTER RAVILOI
+SEAFOOD LASAGNA
+SHRIMP SCAMPI
+THREE CHEESE LASAGNA
+
+%MEATS
+ASIAGO CHICKEN
+BAKED TURKEY WINGS IN GRAVY
+BEEF BRISKET
+BLACKENED CHICKEN & GRITS
+BBQ CHICKEN
+CHICKEN ALI SPRING
+CHICKEN MARSALA
+CUBE STEAK
+FRIED CHICKEN
+GRILLED RIBS
+HAWAIIAN CHICKEN
+HAMBURGER STEAK WITH GRAVY
+LEMON ROSEMARY CHICKEN
+MARINATED CHICKEN
+MEATLOAF (beef or turkey)
+MONTEREY CHICKEN
+PORK CHOPS
+ROAST BEEF
+STEAK
+STUFFED BASIL PROVOLONE CHICKEN BREAST
+TURKEY BBQ
+
+%SEAFOOD
+FILET FISH (fried or baked)
+FRIED SHRIMP
+GRILLED SALMON
+HONEY GLAZED SALMON
+JUMBO LUMP CRAB CAKES
+SHRIMP & GRITS
+
+%DESSERTS
+ASSORTED COOKIES
+ASSORTED PIES
+APPLE DAPPLE
+BANANA PUDDING
+BROWNIES
+CARROT CAKE
+CHEESECAKE
+CHOCOLATE CAKE Chocolate/ chocolate or chocolate cake with butter cream icing
+COBBLERS
+DESSERT BAR
+GERMAN CHOCOLATE CAKE
+PEANUT BUTTER CAKE A chocolate cake with peanut butter cream
+VANILLA CAKE Vanilla cake with a chocolate or butter cream icing
+
+
+%BREADS
+ASSORTED ROLLS
+CORN BREAD
+YEAST ROLLS
+
+%Beverages
+BOTTLED & Flavored WATER (lemon, lime or cucumber)
+COFFEE BAR
+HOT CHOCOLATE BAR
+LEMONADE (Pink, strawberry or regular)
+SWEET TEA
+
+%CUSTOMIZABLE SELF SERVE STATIONS
+%BAKED POTATO BAR
+ P_served with the following toppings scallions, shredded cheddar cheese, shredded mozzarella cheese, bacon, butter and sour cream
+%BISCUIT BAR
+P_Buttermilk & blueberry biscuits served with bacon, country ham, molasses, honey, brown sugar, whipped butter, grape and strawberry jam
+%FAJITA BAR
+P_Beef or chicken, flour tortillas, cheese, salsa, sour cream, lettuce, tomato, sautéed onions and green peppers, black beans and rice
+%GRITS BAR
+P_Southern creamy grits served with cheese, ham, bacon, sun-dried tomatoes, caramelized onions, jalapenos, and scallions. (Optional add-ons: shrimp, blackened chicken or roasted vegetables – for an additional cost)
+
+%NACHO BAR
+P_Ground beef/chicken/brisket/2 meat combo, salsa, lettuce, tomatoes, olives, black beans, pinto beans, sour cream, jalepenos, tortilla chips, mexi-blend cheese.
+%MASHED POTATO BAR
+P_ mashed potatoes with butter, sour cream, chives, bacon, sun-dried tomatoes, shredded cheddar cheese, shredded mozzarella cheese and diced jalapenos
+%PASTA BAR
+ P_Choice of 2 pastas, diced chicken and meat sauce (turkey or ground beef) and alfredo or pesto sauce
+%SWEET POTATO BAR
+P_Mashed sweet potatoes with marshmallow whip, mini marshmallows, brown sugar butter, whipped butter and sugar
+%YOGURT BAR
+P_Vanilla yogurt and/or Greek yogurt with the following toppings - assorted fresh fruits, granola, raisins, honey and shredded coconut
+%WAFFLE BAR
+ P_Belgian waffles served with regular and blueberry syrup, sweet cream whipped butter, whipped cream, fresh strawberries/seasonal fruit, chocolate syrup, chocolate chips (You can add on fried chicken, sausage or bacon for an additional cost)
+
+
+%FISH FRY
+P_Battered and fried fish filets, hushpuppies or fries and 2 sides. Choose from – coleslaw, baked beans, potato salad, green beans or pasta salad.
