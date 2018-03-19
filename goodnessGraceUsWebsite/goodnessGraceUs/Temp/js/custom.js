@@ -116,7 +116,7 @@ function UploadNewMenu(contents) {
 
 }
 
-document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+// document.getElementById('file-input').addEventListener('change', readSingleFile, false);
 
 
 
@@ -127,20 +127,48 @@ function getMenu() {
     $.each(lines, function(n, urlRecord) {
         //$('#simpleDiv').append(urlRecord + 'EOL');
           count++;
-        if (urlRecord.includes('%')) {
-            $('#simpleDiv').append('<br/>');
+        // if (urlRecord.includes('%')) {
+        //     $('#simpleDiv').append('<br/>');
+        //
+        //     $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
+        //
+        //     // $('#simpleDiv').attr("style", "padding-top: 60px;")
+        // } else {
+        //     if (n > 137) {
+        //     } else {
+        //         $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"food-title col-md-4\">' + urlRecord + '</h5>');
+        //         //$('#simpleDiv').attr("style", "Text-align:center;")
+        //     }
+        //
+        // }
 
-            $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
+
+        if (urlRecord.includes('%')) {
+            // $('#simpleDiv').append('<br/>');
+            //
+            // $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
 
             // $('#simpleDiv').attr("style", "padding-top: 60px;")
         } else {
             if (n > 137) {
             } else {
-                $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"food-title col-md-4\">' + urlRecord + '</h5>');
-                //$('#simpleDiv').attr("style", "Text-align:center;")
+              // var html = ""
+              //
+              // html += "<div class=\"col-md-6\"> <div class=\"mu-tab-content-right\"> <ul class=\"mu-menu-item-nav\"> <li> <div class=\"media\"> <div class=\"media-left\"> <a href=\"#\"> <button class=\"media-object\"></button> </a> </div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord.substring(1).toUpperCase() + '</a></h4>"
+              //
+              // html += "'<p></p></div></div></li></ul> </div></div>'"
+if (urlRecord !== "" ) {
+  if(count > 1){
+      $('#startline').append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-right\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 100%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord+'" class=\"media-object\">ADD</button></div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord + '</a></h4><p></p></div></div></li></ul> </div></div>')
+  }
+
+}
             }
 
         }
+
+
+
 
 
 
@@ -148,33 +176,42 @@ function getMenu() {
     $("#Menu").remove();
 }
 
-function getOrder() {
-  var contents = $("#Menu").text();
-  var lines = contents.split("EOL");  
-  var count = 0;                  // Loop through all lines of record    
-  $.each(lines, function(n, urlRecord) {
-      //$('#simpleDiv').append(urlRecord + 'EOL');
-        count++;
-$('#appendHere').append('<div class=\"product\"> <div class=\"product-image\">' + '<img src=\"https://s.cdpn.io/3/dingo-dog-bones.jpg\"> +'
- </div>+''<div class=\"product-details\"><div class=\"product-title\">Dingo Dog Bones</div>
- <p class=\"product-description\"></p></div><div class=\"product-removal\">
- <button class="remove-product"> Remove </button> </div></div>');
 
 
-      // if (urlRecord.includes('%')) {
-      //     $('#appendHere').append('');
-      //
-          $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
-      //
-      //     // $('#simpleDiv').attr("style", "padding-top: 60px;")
-      // } else {
-      //     if (n > 137) {
-      //     } else {
-      //         $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"product-title\">' + urlRecord + '</h5>');
-      //         //$('#simpleDiv').attr("style", "Text-align:center;")
-      //     }
-      //
-      // }
-  });
-  $("#Menu").remove();
-}
+$(document).on('click', '.media-object', function(event) {
+  event.preventDefault();
+  console.log('button clicked!')
+  alert(this.id)
+  $('#addproducts').html('<div class=\"product\"><div class=\"product-image\"></div><div class=\"product-details\"><div class=\"product-title\">' + this.id + '</div><p class=\"product-description\">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself.</p></div><div></div><div></div><div class=\"product-removal\"> <button class=\"remove-product\"> Remove </button></div><div></div></div>');
+  productRow.show();
+  recalculateCart();
+});
+//   var contents = $("#Menu").text();
+//   var lines = contents.split("EOL");  
+//   var count = 0;                  // Loop through all lines of record    
+//   $.each(lines, function(n, urlRecord) {
+//       //$('#simpleDiv').append(urlRecord + 'EOL');
+//         count++;
+// $('#appendHere').append('<div class=\"product\"> <div class=\"product-image\">' + '<img src=\"https://s.cdpn.io/3/dingo-dog-bones.jpg\"> +'
+//  </div>+''<div class=\"product-details\"><div class=\"product-title\">Dingo Dog Bones</div>
+//  <p class=\"product-description\"></p></div><div class=\"product-removal\">
+//  <button class="remove-product"> Remove </button> </div></div>');
+//
+//
+//       // if (urlRecord.includes('%')) {
+//       //     $('#appendHere').append('');
+//       //
+//           $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
+//       //
+//       //     // $('#simpleDiv').attr("style", "padding-top: 60px;")
+//       // } else {
+//       //     if (n > 137) {
+//       //     } else {
+//       //         $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"product-title\">' + urlRecord + '</h5>');
+//       //         //$('#simpleDiv').attr("style", "Text-align:center;")
+//       //     }
+//       //
+//       // }
+//   });
+//   $("#Menu").remove();
+// }

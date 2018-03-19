@@ -1,6 +1,6 @@
 /* Set rates + misc */
 var taxRate = 0.05;
-var shippingRate = 15.00; 
+var shippingRate = 15.00;
 var fadeTime = 300;
 
 
@@ -18,17 +18,17 @@ $('.product-removal button').click( function() {
 function recalculateCart()
 {
   var subtotal = 0;
-  
+
   /* Sum up row totals */
   $('.product').each(function () {
     subtotal += parseFloat($(this).children('.product-line-price').text());
   });
-  
+
   /* Calculate totals */
   var tax = subtotal * taxRate;
   var shipping = (subtotal > 0 ? shippingRate : 0);
   var total = subtotal + tax + shipping;
-  
+
   /* Update totals display */
   $('.totals-value').fadeOut(fadeTime, function() {
     $('#cart-subtotal').html(subtotal.toFixed(2));
@@ -53,7 +53,7 @@ function updateQuantity(quantityInput)
   var price = parseFloat(productRow.children('.product-price').text());
   var quantity = $(quantityInput).val();
   var linePrice = price * quantity;
-  
+
   /* Update line price display and recalc cart totals */
   productRow.children('.product-line-price').each(function () {
     $(this).fadeOut(fadeTime, function() {
@@ -61,7 +61,7 @@ function updateQuantity(quantityInput)
       recalculateCart();
       $(this).fadeIn(fadeTime);
     });
-  });  
+  });
 }
 
 
@@ -71,7 +71,19 @@ function removeItem(removeButton)
   /* Remove row from DOM and recalc cart total */
   var productRow = $(removeButton).parent().parent();
   productRow.slideUp(fadeTime, function() {
-    productRow.remove();
+    productRow.hide();
     recalculateCart();
   });
 }
+
+/* Add item to cart */
+// function addItem()
+// {
+//   /* Add row from DOM and recalc cart total */
+//   //var productRow = $(addButton).parent().parent();
+//   productRow.slideUp(fadeTime, function() {
+//     $('#addproducts').html('<div class=\"product\"><div class=\"product-image\"></div><div class=\"product-details\"><div class=\"product-title\">'this.id'</div><p class=\"product-description\">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself.</p></div><div></div><div></div><div class=\"product-removal\"> <button class=\"remove-product\"> Remove </button></div><div></div></div>')
+//     productRow.show();
+//     recalculateCart();
+//   });
+// }
