@@ -122,6 +122,7 @@ if (typeof jQuery === 'undefined') {
     if (e.isDefaultPrevented()) return
 
     $parent.removeClass('in')
+    $parent.parent.hide()
 
     function removeElement() {
       // detach from parent, fire event then clean up data
@@ -1036,7 +1037,7 @@ if (typeof jQuery === 'undefined') {
       .removeClass('in')
       .off('click.dismiss.bs.modal')
       .off('mouseup.dismiss.bs.modal')
-
+      .parent.hide()
     this.$dialog.off('mousedown.dismiss.bs.modal')
 
     $.support.transition && this.$element.hasClass('fade') ?
@@ -1126,6 +1127,8 @@ if (typeof jQuery === 'undefined') {
 
     } else if (!this.isShown && this.$backdrop) {
       this.$backdrop.removeClass('in')
+      this.$backdrop.parent.hide()
+
 
       var callbackRemove = function () {
         that.removeBackdrop()
@@ -1576,6 +1579,7 @@ if (typeof jQuery === 'undefined') {
     if (e.isDefaultPrevented()) return
 
     $tip.removeClass('in')
+    $tip.parent.hide()
 
     $.support.transition && $tip.hasClass('fade') ?
       $tip
@@ -2143,7 +2147,6 @@ if (typeof jQuery === 'undefined') {
           .find('[data-toggle="tab"]')
             .attr('aria-expanded', true)
       }
-
       callback && callback()
     }
 
@@ -2154,6 +2157,8 @@ if (typeof jQuery === 'undefined') {
       next()
 
     $active.removeClass('in')
+    $active.parent.hide()
+
   }
 
 

@@ -1,15 +1,15 @@
-/** 
+/**
   * Template Name: OsteriaX
-  * Version: 1 
+  * Version: 1
   * Template Scripts
   * Author: MarkUps
   * Author URI: http://www.markups.io/
 
   Custom JS
-  
 
-  1. TOP SLIDER (SLICK SLIDER) 
-  2. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX ) 
+
+  1. TOP SLIDER (SLICK SLIDER)
+  2. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
   3. DATEPICKER
   4. SHEF SLIDER ( SLICK SLIDER )
   5. TESTIMONIAL SLIDER ( SLICK SLIDER )
@@ -17,23 +17,23 @@
   7. MENU SMOOTH SCROLLING
   8. HOVER DROPDOWN MENU
   9. SCROLL TOP BUTTON
-  10. BUTTON SMOOTH SCROLL ( VIEW RESERVATION FORM ) 
+  10. BUTTON SMOOTH SCROLL ( VIEW RESERVATION FORM )
 
-  
+
 **/
 
 jQuery(function($){
 
-  
+
   /* ----------------------------------------------------------- */
   /*  1. TOP SLIDER (SLICK SLIDER)
-  /* ----------------------------------------------------------- */    
+  /* ----------------------------------------------------------- */
 
     jQuery('.mu-top-slider').slick({
       dots: true,
       infinite: true,
       arrows: false,
-      speed: 500,     
+      speed: 500,
       autoplay: true,
       fade: true,
       cssEase: 'linear'
@@ -41,7 +41,7 @@ jQuery(function($){
 
   /* ----------------------------------------------------------- */
   /*  2. PORTFOLIO POPUP VIEW ( IMAGE LIGHTBOX )
-  /* ----------------------------------------------------------- */ 
+  /* ----------------------------------------------------------- */
 
   $('.mu-imglink').magnificPopup({
     type: 'image',
@@ -53,13 +53,13 @@ jQuery(function($){
 
   /* ----------------------------------------------------------- */
   /*  3. DATEPICKER
-  /* ----------------------------------------------------------- */      
+  /* ----------------------------------------------------------- */
 
     jQuery('#datepicker').datepicker();
 
   /* ----------------------------------------------------------- */
   /* 4. SHEF SLIDER (SLICK SLIDER)
-  /* ----------------------------------------------------------- */    
+  /* ----------------------------------------------------------- */
 
     jQuery('.mu-chef-nav').slick({
       dots: true,
@@ -102,37 +102,37 @@ jQuery(function($){
 
   /* ----------------------------------------------------------- */
   /*  5. TESTIMONIAL SLIDER (SLICK SLIDER)
-  /* ----------------------------------------------------------- */    
+  /* ----------------------------------------------------------- */
 
     jQuery('.mu-testimonial-slider').slick({
-      dots: true,      
+      dots: true,
       infinite: true,
       arrows: false,
       autoplay: true,
-      speed: 500,      
+      speed: 500,
       cssEase: 'linear'
-    });       
+    });
 
   /* ----------------------------------------------------------- */
   /*  6. GOOGLE MAP
-  /* ----------------------------------------------------------- */ 
-        
+  /* ----------------------------------------------------------- */
+
     $('#mu-map').click(function () {
         $('#mu-map iframe').css("pointer-events", "auto");
     });
-    
-    $("#mu-map").mouseleave(function() {
-      $('#mu-map iframe').css("pointer-events", "none"); 
-    });
-    
 
-	
-	
+    $("#mu-map").mouseleave(function() {
+      $('#mu-map iframe').css("pointer-events", "none");
+    });
+
+
+
+
   /* ----------------------------------------------------------- */
   /*  7. MENU SMOOTH SCROLLING
-  /* ----------------------------------------------------------- */ 
+  /* ----------------------------------------------------------- */
 
-  
+
     //MENU SCROLLING WITH ACTIVE ITEM SELECTED
 
       // Cache selectors
@@ -152,10 +152,11 @@ jQuery(function($){
       menuItems.click(function(e){
         var href = $(this).attr("href"),
             offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+32;
-        jQuery('html, body').stop().animate({ 
+        jQuery('html, body').stop().animate({
             scrollTop: offsetTop
-        }, 1500);           
-         jQuery('.navbar-collapse').removeClass('in');  
+        }, 1500);
+         jQuery('.navbar-collapse').removeClass('in');
+          jQuery('.navbar-collapse').hide();
         e.preventDefault();
       });
 
@@ -163,7 +164,7 @@ jQuery(function($){
       jQuery(window).scroll(function(){
          // Get container scroll position
          var fromTop = $(this).scrollTop()+topMenuHeight;
-         
+
          // Get id of current scroll item
          var cur = scrollItems.map(function(){
            if ($(this).offset().top < fromTop)
@@ -172,20 +173,20 @@ jQuery(function($){
          // Get the id of the current element
          cur = cur[cur.length-1];
          var id = cur && cur.length ? cur[0].id : "";
-         
+
          if (lastId !== id) {
              lastId = id;
              // Set/remove active class
              menuItems
                .parent().removeClass("active")
                .end().filter("[href=\\#"+id+"]").parent().addClass("active");
-         }           
+         }
       })
-  
+
   /* ----------------------------------------------------------- */
   /*  8. HOVER DROPDOWN MENU
-  /* ----------------------------------------------------------- */ 
-  
+  /* ----------------------------------------------------------- */
+
   // for hover dropdown menu
     jQuery('ul.nav li.dropdown').hover(function() {
       jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
@@ -193,7 +194,7 @@ jQuery(function($){
       jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
     });
 
-    
+
   /* ----------------------------------------------------------- */
   /*  9. SCROLL TOP BUTTON
   /* ----------------------------------------------------------- */
@@ -207,14 +208,14 @@ jQuery(function($){
         jQuery('.scrollToTop').fadeOut();
       }
     });
-     
+
     //Click event to scroll to top
 
     jQuery('.scrollToTop').click(function(){
       jQuery('html, body').animate({scrollTop : 0},800);
       return false;
     });
-  
+
   /* ----------------------------------------------------------- */
   /*  10. BUTTON SMOOTH SCROLL ( VIEW MY WORK )
   /* ----------------------------------------------------------- */
@@ -229,6 +230,5 @@ jQuery(function($){
               window.location.hash = target;
       });
   });
-  
-});
 
+});

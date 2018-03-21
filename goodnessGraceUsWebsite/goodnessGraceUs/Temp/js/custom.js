@@ -116,75 +116,93 @@ function UploadNewMenu(contents) {
 
 }
 
-// document.getElementById('file-input').addEventListener('change', readSingleFile, false);
-
-
-
 function getMenu() {
-    var contents = $("#Menu").text();
-    var lines = contents.split("EOL");  
-    var count = 0;                  // Loop through all lines of record    
-    $.each(lines, function(n, urlRecord) {
-        //$('#simpleDiv').append(urlRecord + 'EOL');
-          count++;
-        // if (urlRecord.includes('%')) {
-        //     $('#simpleDiv').append('<br/>');
-        //
-        //     $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
-        //
-        //     // $('#simpleDiv').attr("style", "padding-top: 60px;")
-        // } else {
-        //     if (n > 137) {
-        //     } else {
-        //         $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"food-title col-md-4\">' + urlRecord + '</h5>');
-        //         //$('#simpleDiv').attr("style", "Text-align:center;")
-        //     }
-        //
-        // }
+var contents = $("#Menu").text();
+var lines = contents.split("EOL");
+var count = 0;                  // Loop through all lines of record
+var currentHeader = ""
+$.each(lines, function(n, urlRecord) {
+    //$('#simpleDiv').append(urlRecord + 'EOL');
+    if (urlRecord.includes('%')) {
+      var idNames = urlRecord
+      console.log(idNames)
 
+      currentHeader = urlRecord.substring(1, 4)
+      $('.mu-restaurant-menu').append('<li id=\"' + urlRecord.substring(1, 4) + '\" class=\"listItem\"><a href=\"#' + urlRecord.substring(1, 4) + '\" data-toggle=\"tab\">' + urlRecord.substring(1) + '</a></li>');
+      count++;
+      if (count == 1){
+       $('#CategoryHeaders').append('<div class=\"tab-pane fade in hidden\" id=\"' + urlRecord.substring(1, 4) + '\"><div class=\"mu-tab-content-area\"><div class=\"row '+ currentHeader +'\">');
+      }
+      else {
+        $('#CategoryHeaders').append('</div></div></div>');
+        $('#CategoryHeaders').append('<div class=\"tab-pane fade in hidden\" id=\"' + urlRecord.substring(1, 4) + '\"><div class=\"mu-tab-content-area\"><div class=\"row '+ currentHeader +'\">');
+      }
+    } else {
+        if (n > 137) {} else {
+            if (urlRecord !== "") {
+                if (n > 1) {
+                  var classname = '.' + currentHeader +'';
+                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 100%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord + '" class=\"media-object\">ADD</button></div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord + '</a></h4><p></p></div></div></li></ul> </div></div>');
+                }
 
-        if (urlRecord.includes('%')) {
-            // $('#simpleDiv').append('<br/>');
-            //
-            // $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
-
-            // $('#simpleDiv').attr("style", "padding-top: 60px;")
-        } else {
-            if (n > 137) {
-            } else {
-              // var html = ""
-              //
-              // html += "<div class=\"col-md-6\"> <div class=\"mu-tab-content-right\"> <ul class=\"mu-menu-item-nav\"> <li> <div class=\"media\"> <div class=\"media-left\"> <a href=\"#\"> <button class=\"media-object\"></button> </a> </div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord.substring(1).toUpperCase() + '</a></h4>"
-              //
-              // html += "'<p></p></div></div></li></ul> </div></div>'"
-if (urlRecord !== "" ) {
-  if(count > 1){
-      $('#startline').append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-right\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 100%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord+'" class=\"media-object\">ADD</button></div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord + '</a></h4><p></p></div></div></li></ul> </div></div>')
-  }
-
-}
             }
-
         }
 
-
-
-
-
-
-    });
-    $("#Menu").remove();
+    }
+});
+$("#Menu").remove();
 }
 
+var recentAdd = new Array();
+$(document).on('click', '.listItem', function(event) {
+  console.log('this')
+  console.log(this.id)
+  var clickedTab = this.id
+  // $(`div#${clickedTab}.tab-pane`).each(function(event) {
+
+$('.recent').removeClass('active').addClass('hidden').removeClass('recent')
+$(`div#${clickedTab}.tab-pane`).removeClass('hidden').addClass('active').addClass('recent')
+
+
+   // recentAdd.push(clickedTab)
+   // for (i = 0; i < recentAdd.length; i++) {
+   //   var X = recentAdd[i]
+   //   console.log(X)
+   //   if (recentAdd[i] !== clickedTab){
+   //     var ItemID = recentAdd[i]
+   //     $(`div#${clickedTab}.tab-pane`).closest(ItemID).removeClass('active').addClass('hidden')
+   //   }
+   // }
+
+  // $(this).removeClass('hidden');
+  // $(this).addClass('active');
+
+  // if($(this).hasClass('active')){
+  //   this.show();
+  //   alert(this.id);
+  // }else{
+  //   this.hide();
+  // }
+// });
+
+});
 
 
 $(document).on('click', '.media-object', function(event) {
   event.preventDefault();
-  console.log('button clicked!')
-  alert(this.id)
-  $('#addproducts').html('<div class=\"product\"><div class=\"product-image\"></div><div class=\"product-details\"><div class=\"product-title\">' + this.id + '</div><p class=\"product-description\">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself.</p></div><div></div><div></div><div class=\"product-removal\"> <button class=\"remove-product\"> Remove </button></div><div></div></div>');
+  $('#addproducts').append('<div class=\"product\"><div class=\"product-image\"></div><div class=\"product-details\"><div class=\"product-title\">' + this.id + '</div><p class=\"product-description\"></p></div><div></div><div></div><div class=\"product-removal\"> <button class=\"remove-product\"> Remove </button></div><div></div></div>');
   productRow.show();
   recalculateCart();
+});
+
+$(document).on('click', '.remove-product', function(event) {
+  event.preventDefault();
+  /* Remove row from DOM and recalc cart total */
+  var productRow = $(this).parent().parent();
+  productRow.slideUp(fadeTime, function() {
+    productRow.hide();
+    recalculateCart();
+  });
 });
 //   var contents = $("#Menu").text();
 //   var lines = contents.split("EOL");  
