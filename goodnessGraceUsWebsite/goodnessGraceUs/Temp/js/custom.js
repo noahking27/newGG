@@ -121,9 +121,22 @@ var contents = $("#Menu").text();
 var lines = contents.split("EOL");
 var count = 0;                  // Loop through all lines of record
 var currentHeader = ""
+
+
+// var ItemArray = [];
+// ItemArray.push({
+//     Title : urlRecord,
+//     Description : []
+// });
+//
+// ItemArray[0].Item.push("New Item");
+//
+// console.log(ItemArray);
+
 $.each(lines, function(n, urlRecord) {
+  if (!(urlRecord.includes("END"))) {
     //$('#simpleDiv').append(urlRecord + 'EOL');
-    if (urlRecord.includes('%')) {
+    if (urlRecord.includes('%') && urlRecord !== "") {
       var idNames = urlRecord
       console.log(idNames)
 
@@ -138,22 +151,38 @@ $.each(lines, function(n, urlRecord) {
         $('#CategoryHeaders').append('<div class=\"tab-pane fade in hidden\" id=\"' + urlRecord.substring(1, 4) + '\"><div class=\"mu-tab-content-area\"><div class=\"row '+ currentHeader +'\">');
       }
     } else {
-        if (n > 137) {} else {
-            if (urlRecord !== "") {
-                if (n > 1) {
+          if (urlRecord !== "") {
+              if (n > 1) {
+                var des = urlRecord.indexOf('P_')
+                if (des < 0){
+
                   var classname = '.' + currentHeader +'';
-                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 100%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord + '" class=\"media-object\">ADD</button></div><div class=\"media-body\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord + '</a></h4><p></p></div></div></li></ul> </div></div>');
+                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 85%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord + '" type=\"Button\" class=\"media-object btn btn-success\">ADD</button></div><div class=\"media-body media-middle\"> <h4 class=\"media-heading\"><a href=\"#\">' + urlRecord + '</a></h4><p></p></div></div></li></ul> </div></div>');
+
+                } else {
+                  des = des + 2
+                  var start = urlRecord.length - des
+                  var title = urlRecord.substring(0, des - 2)
+                  var classname = '.' + currentHeader +'';
+                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 85%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord + '" type=\"Button\" class=\"media-object btn btn-success\">ADD</button></div><div class=\"media-body media-middle\"> <h4 class=\"media-heading\"><a href=\"#\">' + title + '</a></h4><p>' + urlRecord.substring(des) + '</p></div></div></li></ul> </div></div>');
+
                 }
 
-            }
-        }
+              }
 
-    }
+          }
+
+      }
+  } else {
+      return false;
+  }
+
+
 });
 $("#Menu").remove();
 }
 
-var recentAdd = new Array();
+var shopCount = 0
 $(document).on('click', '.listItem', function(event) {
   console.log('this')
   console.log(this.id)
@@ -164,31 +193,12 @@ $('.recent').removeClass('active').addClass('hidden').removeClass('recent')
 $(`div#${clickedTab}.tab-pane`).removeClass('hidden').addClass('active').addClass('recent')
 
 
-   // recentAdd.push(clickedTab)
-   // for (i = 0; i < recentAdd.length; i++) {
-   //   var X = recentAdd[i]
-   //   console.log(X)
-   //   if (recentAdd[i] !== clickedTab){
-   //     var ItemID = recentAdd[i]
-   //     $(`div#${clickedTab}.tab-pane`).closest(ItemID).removeClass('active').addClass('hidden')
-   //   }
-   // }
-
-  // $(this).removeClass('hidden');
-  // $(this).addClass('active');
-
-  // if($(this).hasClass('active')){
-  //   this.show();
-  //   alert(this.id);
-  // }else{
-  //   this.hide();
-  // }
-// });
-
 });
 
 
 $(document).on('click', '.media-object', function(event) {
+  shopCount += 1
+  $('.badge').html(shopCount)
   event.preventDefault();
   $('#addproducts').append('<div class=\"product\"><div class=\"product-image\"></div><div class=\"product-details\"><div class=\"product-title\">' + this.id + '</div><p class=\"product-description\"></p></div><div></div><div></div><div class=\"product-removal\"> <button class=\"remove-product\"> Remove </button></div><div></div></div>');
   productRow.show();
@@ -196,6 +206,8 @@ $(document).on('click', '.media-object', function(event) {
 });
 
 $(document).on('click', '.remove-product', function(event) {
+  shopCount -= 1
+    $('.badge').html(shopCount)
   event.preventDefault();
   /* Remove row from DOM and recalc cart total */
   var productRow = $(this).parent().parent();
@@ -204,32 +216,6 @@ $(document).on('click', '.remove-product', function(event) {
     recalculateCart();
   });
 });
-//   var contents = $("#Menu").text();
-//   var lines = contents.split("EOL");  
-//   var count = 0;                  // Loop through all lines of record    
-//   $.each(lines, function(n, urlRecord) {
-//       //$('#simpleDiv').append(urlRecord + 'EOL');
-//         count++;
-// $('#appendHere').append('<div class=\"product\"> <div class=\"product-image\">' + '<img src=\"https://s.cdpn.io/3/dingo-dog-bones.jpg\"> +'
-//  </div>+''<div class=\"product-details\"><div class=\"product-title\">Dingo Dog Bones</div>
-//  <p class=\"product-description\"></p></div><div class=\"product-removal\">
-//  <button class="remove-product"> Remove </button> </div></div>');
-//
-//
-//       // if (urlRecord.includes('%')) {
-//       //     $('#appendHere').append('');
-//       //
-//           $('#simpleDiv').append('<h5 style=\"Text-align:center;text-decoration: underline\" class=\"text-primary col-md-12\">' + urlRecord.substring(1).toUpperCase() + '</h5>');
-//       //
-//       //     // $('#simpleDiv').attr("style", "padding-top: 60px;")
-//       // } else {
-//       //     if (n > 137) {
-//       //     } else {
-//       //         $('#simpleDiv').append('<h5 style=\"Text-align:center;\" class=\"product-title\">' + urlRecord + '</h5>');
-//       //         //$('#simpleDiv').attr("style", "Text-align:center;")
-//       //     }
-//       //
-//       // }
-//   });
-//   $("#Menu").remove();
-// }
+$( "#ALL" ).click(function() {
+  $('.tab-pane').removeClass('hidden').addClass('active').addClass('recent')
+});

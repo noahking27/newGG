@@ -679,7 +679,7 @@ img {
 
 .mu-menu-item-nav li .media .media-left {
   width: 110px;
-  height: 110px;
+  height: 100%;
 }
 
 .mu-menu-item-nav li .media .media-left a,

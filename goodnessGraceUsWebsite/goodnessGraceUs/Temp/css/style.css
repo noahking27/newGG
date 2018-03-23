@@ -2050,10 +2050,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* End Image Header */
 /* End Headers */
 /* Content */
-section {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
+
 
 .parallax-background {
   background-attachment: fixed !important;
@@ -2192,7 +2189,6 @@ section {
 
 .food-img {
   max-width: 600px;
-  margin-bottom: 80px;
 }
 
 #main-menu {

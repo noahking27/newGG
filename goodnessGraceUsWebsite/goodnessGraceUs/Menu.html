@@ -38,6 +38,7 @@
 
   <!-- Main style sheet -->
   <link href="ordermenu/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="ShopCart/css/style.css">
 <script>
 function forprint(){
 if (!window.print){
@@ -82,202 +83,122 @@ window.print()
                            <li><a href="Menu.html">MENU</a></li>
                         <li><a href="TESTIMONIAL.html">TESTIMONIAL</a></li>
                         <li><a href="CONTACT.html">CONTACT</a></li>
+                        <li>  <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge"></span></a></li>
+                        <div class="navbar-right">
+
+                          <div class="shopping-cart">
+                            <div class="shopping-cart-header">
+                              <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"></span>
+
+                              <div class="shopping-cart-total">
+                                <span class="lighter-text"></span>
+                                <span class="main-color-text total"></span>
+                              </div>
+                            </div> <!--end shopping-cart-header -->
+                            <ul class="shopping-cart-items">
+                              <div class="column-labels">
+                                <label class="product-image">Image</label>
+                                <label class="product-details">Product</label>
+                                <label class="product-removal">Remove</label>
+                              </div>
+                              <div id="addproducts"></div>
+                            </ul>
+
+                            <a href="#" class="button">Checkout <i class="fa fa-chevron-right"></i></a>
+                          </div> <!--end shopping-cart -->
+                        </div> <!--end navbar-right -->
+                        <!-- <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li> -->
                     </ul>
+
                 </div>
                 <!--/.nav-collapse -->
             </div>
             <!-- / container -->
         </nav>
     </header>
-    <!-- / header -->
-
-    <!-- content -->
-
-    <div class="space-80">&nbsp;</div>
-
     <section id="starter-menu">
         <div class="container">
+          <!-- <div class="shopping-cart">
+            <div class="shopping-cart-header">
+              <i class="fa fa-shopping-cart cart-icon"></i><span class="badge">3</span>
+              <div class="shopping-cart-total">
 
-            <!-- <input type="file" id="file-input">
-            <div id="file-content"></div> -->
-            <!-- <br> -->
-
-
-            <!-- / page-header -->
-            <img src="Temp/images/menuheader.png" alt="" class="food-img wow fadeInUp first">
-<div></div>
-            <div class="row">
-                <div class="col-md-12 menu-items wow fadeIn first">
-                    <div id="simpleDiv"></div>
-                    <p id="food"></p>
               </div>
-                <!-- / menu-items -->
-
-                <div class="col-md-12 menu-items wow fadeIn first">
-                    <div class="col-md-4">
-                        <h5 class="food-title">BAKED POTATO BAR</h5>
-                        <p class="food-text"> served with the following toppings scallions, shredded cheddar cheese, shredded mozzarella cheese, bacon, butter and sour cream.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">BISCUIT BAR </h5>
-                        <p class="food-text">Buttermilk & blueberry biscuits served with bacon, country ham, molasses, honey, brown sugar, whipped butter, grape and strawberry jam.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">FAJITA BAR </h5>
-                        <p class="food-text">Beef or chicken, flour tortillas, cheese, salsa, sour cream, lettuce, tomato, sautéed onions and green peppers, black beans and rice.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">GRITS BAR </h5>
-                        <p class="food-text">Southern creamy grits served with cheese, ham, bacon, sun-dried tomatoes, caramelized onions, jalapenos, and scallions. (Optional add-ons: shrimp, blackened chicken or roasted vegetables – for an additional cost).</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">NACHO BAR</h5>
-                        <p class="food-text">Ground beef/chicken/brisket/2 meat combo, salsa, lettuce, tomatoes, olives, black beans, pinto beans, sour cream, jalepenos, tortilla chips, mexi-blend cheese.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">MASHED POTATO BAR </h5>
-                        <p class="food-text">mashed potatoes with butter, sour cream, chives, bacon, sun-dried tomatoes, shredded cheddar cheese, shredded mozzarella cheese and diced jalapenos.</p>
-
-                    </div>
-
-                </div>
-                <!-- / menu-items -->
-
-                <div class="col-md-12 menu-items wow fadeIn first">
-                    <div class="col-md-4">
-                        <h5 class="food-title">PASTA BAR </h5>
-                        <p class="food-text">Choice of 2 pastas, diced chicken and meat sauce (turkey or ground beef) and alfredo or pesto sauce.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">SWEET POTATO BAR </h5>
-                        <p class="food-text">Mashed sweet potatoes with marshmallow whip, mini marshmallows, brown sugar butter, whipped butter and sugar.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">YOGURT BAR</h5>
-                        <p class="food-text">Vanilla yogurt and/or Greek yogurt with the following toppings - assorted fresh fruits, granola, raisins, honey and shredded coconut.</p>
-
-                    </div>
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">WAFFLE BAR</h5>
-                        <p class="food-text">Belgian waffles served with regular and blueberry syrup, sweet cream whipped butter, whipped cream, fresh strawberries/seasonal fruit, chocolate syrup, chocolate chips (You can add on fried chicken, sausage or bacon for an additional
-                            cost).
-                        </p>
-                    </div>
-
-
-                    <div class="col-md-4">
-                        <h5 class="food-title">FISH FRY</h5>
-                        <p class="food-text">Battered and fried fish filets, hushpuppies or fries and 2 sides. Choose from – coleslaw, baked beans, potato salad, green beans or pasta salad.</p>
-
-                    </div>
-
-                </div>
-                <!-- / menu-items -->
+            </div> <!--end shopping-cart-header
+            <div class="column-labels">
+              <label class="product-image">Image</label>
+              <label class="product-details">Product</label>
+              <label class="product-removal">Remove</label>
             </div>
+            <div id="addproducts"></div>
+            <a href="#" class="button">Checkout</a>
+          </div> <!--end shopping-cart --> -->
+            <!-- / page-header -->
+            <img src="Temp/images/menuheader.png" alt="" class="food-img wow fadeInUp first" style="margin-top:3%;">
+          </section>
+          <a href="#top" class="scroll-to-top page-scroll is-hidden" data-nav-status="toggle"><i class="fa fa-angle-up"></i></a>
+          <!-- / scroll to top -->
+          <div id="Menu">
+              EOLEOLEOLEOLEOL%SoupsEOLBROCCOLI AND CHEDDAREOLCHICKEN NOODLEEOLCHICKEN PARMEOLPOTATO EOLVEGETABLEEOLEOL%SaladsEOLCAESAR SALADEOLGREEK SALADEOLHOUSE SALADEOLMACARONI SALADEOLPASTA SALADEOLWALDORF SALADEOLEOLEOL%Hors D’oeuvresEOLANTI PASTA TRAYEOLASSORTED
+              CHEESE AND FRUIT TRAYEOLASSORTED MEAT TRAYEOLASSORTED VEGETABLE TRAY EOLBREADED MOZARELLA EOLBRUSCHETTA CROSTINI EOLBUFFALO CHICKEN DIP Served with pita chips or crostiniEOLCHICKEN SALAD IN PHYLLO CUPS OR ON CROISSANTSEOLCHICKEN WINGS (various
+              flavors)EOLCOCKTAIL FRANKSEOLCOCKTAIL MEATBALLSEOLCRAB DIP Served with pita chips or crostiniEOLCHICKEN & WAFFLESEOLGRILLED THAI SPICE CHICKEN SLIDERSEOLHAMBURGER SLIDERS BRISKET SLIDERSEOLITALIAN SAUSAGE IN MARINARAEOLRAW OR STEAMED SHRIMP COCKTAILEOLSHRIMP
+              & GRITSEOLQUESADILLAS (chicken or cheese)EOLEOLEOLEOL%VEGETABLES/SIDESEOLBAKED APPLESEOLBAKED BEANS (veggie or country style)EOLBAKED MAC & CHEESEEOLBAKED POTATOESEOLBOILED NEW POTATOESEOLCABBAGEEOLCOLE SLAWEOLGARLIC MASHED POTATOESEOLGRILLED
+              ASPARAGUSEOLJAMBALAYAEOLPINTO BEANSEOLPOTATO SALADEOLRICE (pilaf, jasmine or Spanish)EOLROASTED VEGETABLESEOLROASTED RED SKIN POTATOES WITH HERB SEASONINGEOLSOUTHERN COLLARD GREENSEOLSPAGHETTIEOLSTEAMED VEGETABLESEOLSTIR FRY RICEEOLSTRING BEANSEOLSWEET
+              POTATO SOUFFLE WITH A PECAN CRUMB TOPPINGEOLTWICE BAKED POTATOSEOLEOL%PASTASEOLBAKED SPAGHETTIEOLBAKED ZITIEOLCHICKEN AND BROCCOLI ALFREDOEOLFETTUCCINE ALFREDOEOLLASAGNA (meat or vegetable)EOLLOBSTER RAVILOIEOLSEAFOOD LASAGNAEOLSHRIMP SCAMPIEOLTHREE
+              CHEESE LASAGNAEOLEOL%MEATSEOLASIAGO CHICKENEOLBAKED TURKEY WINGS IN GRAVYEOLBEEF BRISKETEOLBLACKENED CHICKEN & GRITSEOLBBQ CHICKENEOLCHICKEN ALI SPRINGEOLCHICKEN MARSALA EOLCUBE STEAKEOLFRIED CHICKENEOLGRILLED RIBSEOLHAWAIIAN CHICKENEOLHAMBURGER
+              STEAK WITH GRAVYEOLLEMON ROSEMARY CHICKENEOLMARINATED CHICKENEOLMEATLOAF (beef or turkey)EOLMONTEREY CHICKENEOLPORK CHOPSEOLROAST BEEFEOLSTEAKEOLSTUFFED BASIL PROVOLONE CHICKEN BREAST EOLTURKEY BBQEOLEOL%SEAFOODEOLFILET FISH (fried or baked)EOLFRIED
+              SHRIMPEOLGRILLED SALMONEOLHONEY GLAZED SALMONEOLJUMBO LUMP CRAB CAKESEOLSHRIMP & GRITSEOLEOL%DESSERTSEOLASSORTED COOKIESEOLASSORTED PIESEOLAPPLE DAPPLEEOLBANANA PUDDINGEOLBROWNIESEOLCARROT CAKEEOLCHEESECAKEEOLCHOCOLATE CAKE Chocolate/ chocolate
+              or chocolate cake with butter cream icingEOLCOBBLERSEOLDESSERT BAREOLGERMAN CHOCOLATE CAKEEOLPEANUT BUTTER CAKE A chocolate cake with peanut butter creamEO ANILLA CAKE Vanilla cake with a chocolate or butter cream icingEOLEOLEOL%BREADSEOLASSORTED
+              ROLLSEOLCORN BREADEOLYEAST ROLLSEOLEOL%BeveragesEOLBOTTLED & Flavored WATER (lemon, lime or cucumber) EOLCOFFEE BAREOLHOT CHOCOLATE BAREOLLEMONADE (Pink, strawberry or regular)EOLSWEET TEAEOLEOL%CUSTOMIZABLE SELF SERVE STATIONSEOLBAKED POTATO
+              BAR P_served with the following toppings scallions, shredded cheddar cheese, shredded mozzarella cheese, bacon, butter and sour creamEOLBISCUIT BAR P_Buttermilk & blueberry biscuits served with bacon, country ham, molasses, honey, brown sugar,
+              whipped butter, grape and strawberry jamEOLFAJITA BAR P_Beef or chicken, flour tortillas, cheese, salsa, sour cream, lettuce, tomato, sautéed onions and green peppers, black beans and riceEOLGRITS BAR P_Southern creamy grits served with cheese,
+              ham, bacon, sun-dried tomatoes, caramelized onions, jalapenos, and scallions. (Optional add-ons: shrimp, blackened chicken or roasted vegetables – for an additional cost)EOLEOLNACHO BAR P_Ground beef/chicken/brisket/2 meat combo, salsa, lettuce,
+              tomatoes, olives, black beans, pinto beans, sour cream, jalepenos, tortilla chips, mexi-blend cheese.EOLMASHED POTATO BAR P_mashed potatoes with butter, sour cream, chives, bacon, sun-dried tomatoes, shredded cheddar cheese, shredded mozzarella
+              cheese and diced jalapenosEOLPASTA BAR P_Choice of 2 pastas, diced chicken and meat sauce (turkey or ground beef) and alfredo or pesto sauceEOLSWEET POTATO BAR P_Mashed sweet potatoes with marshmallow whip, mini marshmallows, brown sugar butter,
+              whipped butter and sugarEOLYOGURT BAR P_Vanilla yogurt and/or Greek yogurt with the following toppings - assorted fresh fruits, granola, raisins, honey and shredded coconutEOLWAFFLE BAR P_Belgian waffles served with regular and blueberry syrup,
+              sweet cream whipped butter, whipped cream, fresh strawberries/seasonal fruit, chocolate syrup, chocolate chips (You can add on fried chicken, sausage or bacon for an additional cost)EOLEOLEOLFISH FRYP_Battered and fried fish filets, hushpuppies
+              or se. Choose from – coleslaw, baked beans, potato salad, green beans or pasta salad. EOLEOL END EOL
+          </div>
+
+          <section>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mu-restaurant-menu-area">
+
+                    <div class="mu-restaurant-menu-content">
+                      <ul class="nav nav-tabs mu-restaurant-menu">
+                      <li id="ALL" class="listItem"><a href="#ALL" data-toggle="tab">All</a></li>
+                      </ul>
+                      <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div id="CategoryHeaders"></div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- footer -->
+          <footer>
+              <div class="container">
+                  <p class="footer-info">© 2018 - <strong> </strong> - Goodness GraceUs.
+                      <span class="social pull-right">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-instagram"></i></a>
+                      <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </span>
+                  </p>
+              </div>
+              <!-- / container -->
+          </footer>
             <!-- / row -->
         </div>
         <!-- / container -->
-    </section>
-    <!-- / starter-menu -->
 
-    <!-- / content -->
-
-    <!-- scroll to top -->
-    <a href=""
-    <a href="#top" class="scroll-to-top page-scroll is-hidden" data-nav-status="toggle"><i class="fa fa-angle-up"></i></a>
-    <!-- / scroll to top -->
-    <div id="Menu">
-        EOLEOLEOLEOLEOL%SoupsEOLBROCCOLI AND CHEDDAREOLCHICKEN NOODLEEOLCHICKEN PARMEOLPOTATOEO VEGETABLEEOLEOL%SaladsEOLCAESAR SALADEOLGREEK SALADEOLHOUSE SALADEOLMACARONI SALADEOLPASTA SALADEOLWALDORF SALADEOLEOLEOL%Hors D’oeuvresEOLANTI PASTA TRAYEOLASSORTED
-        CHEESE AND FRUIT TRAYEOLASSORTED MEAT TRAYEOLASSORTED VEGETABLE TRAY EOLBREADED MOZARELLA EOLBRUSCHETTA CROSTINI EOLBUFFALO CHICKEN DIP Served with pita chips or crostiniEOLCHICKEN SALAD IN PHYLLO CUPS OR ON CROISSANTSEOLCHICKEN WINGS (various
-        flavors)EOLCOCKTAIL FRANKSEOLCOCKTAIL MEATBALLSEOLCRAB DIP Served with pita chips or crostiniEOLCHICKEN & WAFFLESEOLGRILLED THAI SPICE CHICKEN SLIDERSEOLHAMBURGER SLIDERS BRISKET SLIDERSEOLITALIAN SAUSAGE IN MARINARAEOLRAW OR STEAMED SHRIMP COCKTAILEOLSHRIMP
-        & GRITSEOLQUESADILLAS (chicken or cheese)EOLEOLEOLEOL%VEGETABLES/SIDESEOLBAKED APPLESEOLBAKED BEANS (veggie or country style)EOLBAKED MAC & CHEESEEOLBAKED POTATOESEOLBOILED NEW POTATOESEOLCABBAGEEOLCOLE SLAWEOLGARLIC MASHED POTATOESEOLGRILLED
-        ASPARAGUSEOLJAMBALAYAEOLPINTO BEANSEOLPOTATO SALADEOLRICE (pilaf, jasmine or Spanish)EOLROASTED VEGETABLESEOLROASTED RED SKIN POTATOES WITH HERB SEASONINGEOLSOUTHERN COLLARD GREENSEOLSPAGHETTIEOLSTEAMED VEGETABLESEOLSTIR FRY RICEEOLSTRING BEANSEOLSWEET
-        POTATO SOUFFLE WITH A PECAN CRUMB TOPPINGEOLTWICE BAKED POTATOSEOLEOL%PASTASEOLBAKED SPAGHETTIEOLBAKED ZITIEOLCHICKEN AND BROCCOLI ALFREDOEOLFETTUCCINE ALFREDOEOLLASAGNA (meat or vegetable)EOLLOBSTER RAVILOIEOLSEAFOOD LASAGNAEOLSHRIMP SCAMPIEOLTHREE
-        CHEESE LASAGNAEOLEOL%MEATSEOLASIAGO CHICKENEOLBAKED TURKEY WINGS IN GRAVYEOLBEEF BRISKETEOLBLACKENED CHICKEN & GRITSEOLBBQ CHICKENEOLCHICKEN ALI SPRINGEOLCHICKEN MARSALA EOLCUBE STEAKEOLFRIED CHICKENEOLGRILLED RIBSEOLHAWAIIAN CHICKENEOLHAMBURGER
-        STEAK WITH GRAVYEOLLEMON ROSEMARY CHICKENEOLMARINATED CHICKENEOLMEATLOAF (beef or turkey)EOLMONTEREY CHICKENEOLPORK CHOPSEOLROAST BEEFEOLSTEAKEOLSTUFFED BASIL PROVOLONE CHICKEN BREAST EOLTURKEY BBQEOLEOL%SEAFOODEOLFILET FISH (fried or baked)EOLFRIED
-        SHRIMPEOLGRILLED SALMONEOLHONEY GLAZED SALMONEOLJUMBO LUMP CRAB CAKESEOLSHRIMP & GRITSEOLEOL%DESSERTSEOLASSORTED COOKIESEOLASSORTED PIESEOLAPPLE DAPPLEEOLBANANA PUDDINGEOLBROWNIESEOLCARROT CAKEEOLCHEESECAKEEOLCHOCOLATE CAKE Chocolate/ chocolate
-        or chocolate cake with butter cream icingEOLCOBBLERSEOLDESSERT BAREOLGERMAN CHOCOLATE CAKEEOLPEANUT BUTTER CAKE A chocolate cake with peanut butter creamEO ANILLA CAKE Vanilla cake with a chocolate or butter cream icingEOLEOLEOL%BREADSEOLASSORTED
-        ROLLSEOLCORN BREADEOLYEAST ROLLSEOLEOL%BeveragesEOLBOTTLED & Flavored WATER (lemon, lime or cucumber) EOLCOFFEE BAREOLHOT CHOCOLATE BAREOLLEMONADE (Pink, strawberry or regular)EOLSWEET TEAEOLEOL%CUSTOMIZABLE SELF SERVE STATIONSEOLBAKED POTATO
-        BAREOL served with the following toppings scallions, shredded cheddar cheese, shredded mozzarella cheese, bacon, butter and sour creamEOLBISCUIT BAR EOLButtermilk & blueberry biscuits served with bacon, country ham, molasses, honey, brown sugar,
-        whipped butter, grape and strawberry jamEOLFAJITA BAR EOLBeef or chicken, flour tortillas, cheese, salsa, sour cream, lettuce, tomato, sautéed onions and green peppers, black beans and riceEOLGRITS BAR EOLSouthern creamy grits served with cheese,
-        ham, bacon, sun-dried tomatoes, caramelized onions, jalapenos, and scallions. (Optional add-ons: shrimp, blackened chicken or roasted vegetables – for an additional cost)EOLEOLNACHO BAREOLGround beef/chicken/brisket/2 meat combo, salsa, lettuce,
-        tomatoes, olives, black beans, pinto beans, sour cream, jalepenos, tortilla chips, mexi-blend cheese.EOLMASHED POTATO BAREOL mashed potatoes with butter, sour cream, chives, bacon, sun-dried tomatoes, shredded cheddar cheese, shredded mozzarella
-        cheese and diced jalapenosEOLPASTA BAREOL Choice of 2 pastas, diced chicken and meat sauce (turkey or ground beef) and alfredo or pesto sauceEOLSWEET POTATO BAR EOLMashed sweet potatoes with marshmallow whip, mini marshmallows, brown sugar butter,
-        whipped butter and sugarEOLYOGURT BAREO anilla yogurt and/or Greek yogurt with the following toppings - assorted fresh fruits, granola, raisins, honey and shredded coconutEOLWAFFLE BAREOL Belgian waffles served with regular and blueberry syrup,
-        sweet cream whipped butter, whipped cream, fresh strawberries/seasonal fruit, chocolate syrup, chocolate chips (You can add on fried chicken, sausage or bacon for an additional cost)EOLEOLEOLFISH FRYEOLBattered and fried fish filets, hushpuppies
-        or fries and 2 sides. Choose from – coleslaw, baked beans, potato salad, green beans or pasta salad. EOLEOL
-    </div>
-
-    <section id="mu-restaurant-menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="mu-restaurant-menu-area">
-
-              <div class="mu-title">
-                <span class="mu-subtitle">Discover</span>
-                <h2>OUR MENU</h2>
-              </div>
-
-              <div class="mu-restaurant-menu-content">
-                <ul class="nav nav-tabs mu-restaurant-menu">
-
-                  <!-- <li class="active"><a href="#breakfast" data-toggle="tab">Breakfast</a></li>
-                  <li><a href="#meals" data-toggle="tab">Meals</a></li>
-                  <li><a href="#snacks" data-toggle="tab">Snacks</a></li>
-                  <li><a href="#desserts" data-toggle="tab">Desserts</a></li>
-                  <li><a href="#drinks" data-toggle="tab">Drinks</a></li> -->
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content">
-                  <div id="CategoryHeaders"></div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div id="shoppingCart">
-      <div class="column-labels">
-        <label class="product-image">Image</label>
-        <label class="product-details">Product</label>
-        <label class="product-removal">Remove</label>
-      </div>
-      <div id="addproducts"></div>
-
-    </div>
-    <!-- footer -->
-    <footer>
-        <div class="container">
-            <p class="footer-info">© 2018 - <strong> </strong> - Goodness GraceUs.
-                <span class="social pull-right">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-            </span>
-            </p>
-        </div>
-        <!-- / container -->
-    </footer>
     <!-- / footer -->
 
     <!-- javascript -->
@@ -305,6 +226,7 @@ window.print()
     <!-- / hide nav -->
     <script src="Temp/js/custom.js"></script>
     <script  src="Cart/js/index.js"></script>
+    <script  src="ShopCart/js/index.js"></script>
     <!-- / javascript -->
     <!-- <script>
         function getMenu() {
