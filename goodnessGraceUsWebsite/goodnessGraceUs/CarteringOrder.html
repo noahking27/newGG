@@ -1,382 +1,223 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Minimal Restaurant Template">
-  <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
-  <meta name="author" content="KingStudio.ro">
-  <!-- favicon -->
-  <link rel="icon" href="Temp/images/favicon.png">
-  <!-- page title -->
-  <title>Goodness GraceUs</title>
-  <!-- bootstrap css -->
-<link href="Temp/css/bootstrap.min.css" rel="stylesheet" />
-<link rel="stylesheet" href="Cart/css/style.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Minimal Restaurant Template">
+    <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
+    <meta name="author" content="KingStudio.ro">
+
+    <!-- favicon -->
+    <link rel="icon" href="Temp/images/favicon.png">
+    <!-- page title -->
+    <title>Goodness GraceUs</title>
+    <!-- bootstrap css -->
+    <link href="Temp/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- css -->
+    <link href="Temp/css/style.css" rel="stylesheet" />
+    <link href="Temp/css/animate.css" rel="stylesheet">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+    <link href="Temp/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='Temp/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+    <!-- <link rel="stylesheet" href="Cart/css/style.css"> -->
+
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/slick.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/bootstrap-datepicker.css">
+    <!-- Gallery Lightbox -->
+    <link href="ordermenu/assets/css/magnific-popup.css" rel="stylesheet">
+    <!-- Theme color -->
+    <link id="switcher" href="ordermenu/assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="ordermenu/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="ShopCart/css/style.css">
+    <script>
+        function forprint() {
+            if (!window.print) {
+
+                return
+            }
+            window.print()
+        }
+    </script>
 </head>
 
 <body onload="getOrder()">
 
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="spinner spinner-round"></div>
+    </div>
+    <!-- / preloader -->
 
-<div id="shoppingCart"><h1>Shopping Cart</h1>
-
-<div class="shopping-cart">
-
-<div class="column-labels">
-  <label class="product-image">Image</label>
-  <label class="product-details">Product</label>
-  <label class="product-price">Price</label>
-  <label class="product-quantity">Quantity</label>
-  <label class="product-removal">Remove</label>
-  <label class="product-line-price">Total</label>
-</div>
-
-<div class="product">
-  <div class="product-image">
-    <img src="https://s.cdpn.io/3/dingo-dog-bones.jpg">
-  </div>
-  <div class="product-details">
-    <div class="product-title">Dingo Dog Bones</div>
-    <p class="product-description">The best dog bones of all time. Holy crap. Your dog will be begging for these things! I got curious once and ate one myself. I'm a fan.</p>
-  </div>
-  <div class="product-price">12.99</div>
-  <div class="product-quantity">
-    <input type="number" value="2" min="1">
-  </div>
-  <div class="product-removal">
-    <button class="remove-product">
-      Remove
-    </button>
-  </div>
-  <div class="product-line-price">25.98</div>
-</div>
-
-<div class="product">
-  <div class="product-image">
-    <img src="https://s.cdpn.io/3/large-NutroNaturalChoiceAdultLambMealandRiceDryDogFood.png">
-  </div>
-  <div class="product-details">
-    <div class="product-title">Nutro™ Adult Lamb and Rice Dog Food</div>
-    <p class="product-description">Who doesn't like lamb and rice? We've all hit the halal cart at 3am while quasi-blackout after a night of binge drinking in Manhattan. Now it's your dog's turn!</p>
-  </div>
-  <div class="product-price">45.99</div>
-  <div class="product-quantity">
-    <input type="number" value="1" min="1">
-  </div>
-  <div class="product-removal">
-    <button class="remove-product">
-      Remove
-    </button>
-  </div>
-  <div class="product-line-price">45.99</div>
-</div>
-
-<div class="cart-panel">
-  <header class="cart-header">
-    <div class="cart-tabs">
-      <ul class="cart-tab-table">
-        <li class="cart-tab-cell selected">
-          <span class="cart-tab">
-            <span class="tab-ic tab-cart-ic"></span>
-            <span class="tab-label">$1 200 364.89</span>
-          </span>
-        </li>
-        <li class="cart-tab-cell">
-          <span class="cart-tab">
-            <span class="tab-ic tab-heart-line-ic"></span>
-            <span class="tab-label">162</span>
-          </span>
-        </li>
+    <div id="top"></div>
+    <h1 id="OrderHeader"> Food Order List</h2>
+    <div class="orderlist">
+      <ul class="shopping-cart-items row">
+          <div class="addproducts"></div>
       </ul>
-      <span class="tab-selector"></span>
     </div>
-  </header>
-  <div class="cart-content">
-    <div class="cart-sections">
-      <section class="cart-section nano">
-        <ul class="cart-list overthrow nano-content">
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113438_A2_Metropolitan_Clock.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Metropolitan Clock</p>
-                  <p class="cart-item-price">$200.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
+        <div id="menupage">
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-default dark-bg page-nav navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../goodnessGraceUs/Temp/MenuJan2018/Menu.pdf" download>
+
+                        <button type="button" class="btn btn-lg btn-primary-filled btn-pill">
+                            <i class=""></i><b style="color: white;">Download Menu</b></button>
+                    </a>
+                </div>
+                <!-- / navbar-header -->
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="Menu.html">MENU</a></li>
+                        <li><a href="TESTIMONIAL.html">TESTIMONIAL</a></li>
+                        <li><a href="CONTACT.html">CONTACT</a></li>
+                        <li> <a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge"></span></a></li>
+                        <div class="navbar-right">
+
+                            <div class="shopping-cart">
+                                <div class="shopping-cart-header">
+                                    <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"></span>
+
+                                    <div class="shopping-cart-total">
+                                        <span class="lighter-text"></span>
+                                        <span class="main-color-text total"></span>
+                                    </div>
+                                </div>
+                                <!--end shopping-cart-header -->
+                                <ul class="shopping-cart-items row">
+                                    <div class="addproducts"></div>
+                                </ul>
+
+                                <a href="#" class="button checkout" style="background:#bc9d4b;color: white;">Checkout <i class="fa fa-chevron-right"></i></a>
+                            </div>
+                            <!--end shopping-cart -->
+                        </div>
+                        <!--end navbar-right -->
+                        <!-- <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li> -->
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
             </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/114079_A2_Mondaine_Smart_Watch.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Mondaine Helvetica No 1 Smart Watch</p>
-                  <p class="cart-item-price">$950.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
+            <!-- / container -->
+        </nav>
+    </header>
+    <div class="container">
+        <section id="starter-menu">
+
+            <!-- / page-header -->
+            <img src="Temp/Image/noBKlogo.png" alt="" class="food-img fadeInUp first" style="margin-top:12%">
+
+            <a href="#top" class="scroll-to-top page-scroll is-hidden" data-nav-status="toggle"><i class="fa fa-angle-up"></i></a>
+            <!-- / scroll to top -->
+            <div id="Menu">
+                EOLEOLEOLEOLEOL%SoupsEOLBROCCOLI AND CHEDDAREOLCHICKEN NOODLEEOLCHICKEN PARMEOLPOTATO EOLVEGETABLEEOLEOL%SaladsEOLCAESAR SALADEOLGREEK SALADEOLHOUSE SALADEOLMACARONI SALADEOLPASTA SALADEOLWALDORF SALADEOLEOLEOL%Hors D’oeuvresEOLANTI PASTA TRAYEOLASSORTED CHEESE AND FRUIT TRAYEOLASSORTED MEAT TRAYEOLASSORTED VEGETABLE TRAY EOLBREADED MOZARELLA EOLBRUSCHETTA CROSTINI EOLBUFFALO CHICKEN DIP Served with pita chips or crostiniEOLCHICKEN SALAD IN PHYLLO CUPS OR ON CROISSANTSEOLCHICKEN WINGS (various flavors)EOLCOCKTAIL FRANKSEOLCOCKTAIL MEATBALLSEOLCRAB DIP Served with pita chips or crostiniEOLCHICKEN & WAFFLESEOLGRILLED THAI SPICE CHICKEN SLIDERSEOLHAMBURGER SLIDERS BRISKET SLIDERSEOLITALIAN SAUSAGE IN MARINARAEOLRAW OR STEAMED SHRIMP COCKTAILEOLSHRIMP & GRITSEOLQUESADILLAS (chicken or cheese)EOLEOLEOLEOL%VEGETABLES/SIDESEOLBAKED APPLESEOLBAKED BEANS (veggie or country style)EOLBAKED MAC & CHEESEEOLBAKED POTATOESEOLBOILED NEW POTATOESEOLCABBAGEEOLCOLE SLAWEOLGARLIC MASHED POTATOESEOLGRILLED ASPARAGUSEOLJAMBALAYAEOLPINTO BEANSEOLPOTATO SALADEOLRICE (pilaf, jasmine or Spanish)EOLROASTED VEGETABLESEOLROASTED RED SKIN POTATOES WITH HERB SEASONINGEOLSOUTHERN COLLARD GREENSEOLSPAGHETTIEOLSTEAMED VEGETABLESEOLSTIR FRY RICEEOLSTRING BEANSEOLSWEET POTATO SOUFFLE WITH A PECAN CRUMB TOPPINGEOLTWICE BAKED POTATOSEOLEOL%PASTASEOLBAKED SPAGHETTIEOLBAKED ZITIEOLCHICKEN AND BROCCOLI ALFREDOEOLFETTUCCINE ALFREDOEOLLASAGNA (meat or vegetable)EOLLOBSTER RAVILOIEOLSEAFOOD LASAGNAEOLSHRIMP SCAMPIEOLTHREE CHEESE LASAGNAEOLEOL%MEATSEOLASIAGO CHICKENEOLBAKED TURKEY WINGS IN GRAVYEOLBEEF BRISKETEOLBLACKENED CHICKEN & GRITSEOLBBQ CHICKENEOLCHICKEN ALI SPRINGEOLCHICKEN MARSALA EOLCUBE STEAKEOLFRIED CHICKENEOLGRILLED RIBSEOLHAWAIIAN CHICKENEOLHAMBURGER STEAK WITH GRAVYEOLLEMON ROSEMARY CHICKENEOLMARINATED CHICKENEOLMEATLOAF (beef or turkey)EOLMONTEREY CHICKENEOLPORK CHOPSEOLROAST BEEFEOLSTEAKEOLSTUFFED BASIL PROVOLONE CHICKEN BREAST EOLTURKEY BBQEOLEOL%SEAFOODEOLFILET FISH (fried or baked)EOLFRIED SHRIMPEOLGRILLED SALMONEOLHONEY GLAZED SALMONEOLJUMBO LUMP CRAB CAKESEOLSHRIMP & GRITSEOLEOL%DESSERTSEOLASSORTED COOKIESEOLASSORTED PIESEOLAPPLE DAPPLEEOLBANANA PUDDINGEOLBROWNIESEOLCARROT CAKEEOLCHEESECAKEEOLCHOCOLATE CAKE Chocolate/ chocolate or chocolate cake with butter cream icingEOLCOBBLERSEOLDESSERT BAREOLGERMAN CHOCOLATE CAKEEOLPEANUT BUTTER CAKE A chocolate cake with peanut butter creamEO ANILLA CAKE Vanilla cake with a chocolate or butter cream icingEOLEOLEOL%BREADSEOLASSORTED ROLLSEOLCORN BREADEOLYEAST ROLLSEOLEOL%BeveragesEOLBOTTLED & Flavored WATER (lemon, lime or cucumber) EOLCOFFEE BAREOLHOT CHOCOLATE BAREOLLEMONADE (Pink, strawberry or regular)EOLSWEET TEAEOLEOL%CUSTOMIZABLE SELF SERVE STATIONSEOLBAKED POTATO BAR P_served with the following toppings scallions, shredded cheddar cheese, shredded mozzarella cheese, bacon, butter and sour creamEOLBISCUIT BAR P_Buttermilk & blueberry biscuits served with bacon, country ham, molasses, honey, brown sugar, whipped butter, grape and strawberry jamEOLFAJITA BAR P_Beef or chicken, flour tortillas, cheese, salsa, sour cream, lettuce, tomato, sautéed onions and green peppers, black beans and riceEOLGRITS BAR P_Southern creamy grits served with cheese, ham, bacon, sun-dried tomatoes, caramelized onions, jalapenos, and scallions. (Optional add-ons: shrimp, blackened chicken or roasted vegetables – for an additional cost)EOLEOLNACHO BAR P_Ground beef/chicken/brisket/2 meat combo, salsa, lettuce, tomatoes, olives, black beans, pinto beans, sour cream, jalepenos, tortilla chips, mexi-blend cheese.EOLMASHED POTATO BAR P_mashed potatoes with butter, sour cream, chives, bacon, sun-dried tomatoes, shredded cheddar cheese, shredded mozzarella cheese and diced jalapenosEOLPASTA BAR P_Choice of 2 pastas, diced chicken and meat sauce (turkey or ground beef) and alfredo or pesto sauceEOLSWEET POTATO BAR P_Mashed sweet potatoes with marshmallow whip, mini marshmallows, brown sugar butter, whipped butter and sugarEOLYOGURT BAR P_Vanilla yogurt and/or Greek yogurt with the following toppings - assorted fresh fruits, granola, raisins, honey and shredded coconutEOLWAFFLE BAR P_Belgian waffles served with regular and blueberry syrup, sweet cream whipped butter, whipped cream, fresh strawberries/seasonal fruit, chocolate syrup, chocolate chips (You can add on fried chicken, sausage or bacon for an additional cost)EOLEOLEOLFISH FRYP_Battered and fried fish filets, hushpuppies or se. Choose from – coleslaw, baked beans, potato salad, green beans or pasta salad. EOLEOL END EOL
             </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/107156_C2_Kobenstyle_Casserole_6_Quart.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Kobenstyle Casserole - Green</p>
-                  <p class="cart-item-price">$80.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-restaurant-menu-area">
+
+                        <div class="mu-restaurant-menu-content">
+                            <ul class="nav nav-tabs mu-restaurant-menu">
+                                <li id="ALL" class="listItem"><a href="#ALL" data-toggle="tab">All</a></li>
+                            </ul>
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div id="CategoryHeaders"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </li>
-          <li class="cart-list-footer"></li>
-        </ul>
-      </section>
-      <section class="cart-section nano">
-        <ul class="cart-list overthrow nano-content">
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113344_A2_Grand_Prix_Play_Set.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Grand Prix Play Set</p>
-                  <p class="cart-item-price">$90.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113473_A2_Robot_Nightlight.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Robot Nightlight</p>
-                  <p class="cart-item-price">$44.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/99390_A2_Bird_Mobile.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Birds In Harmony Mobile</p>
-                  <p class="cart-item-price">$35.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113760_A2_HAY_Plisse_File_Organizer_A4_Coral_Fade.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">HAY Plissé File Organizer</p>
-                  <p class="cart-item-price">$28.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113335_A2_Osmo_Game_Starter_Kit.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Osmo Game Starter Kit</p>
-                  <p class="cart-item-price">$80.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/107996_A2_Kits_DIY_Gamer_Set_with_Arduino.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">DIY Gamer Kit (With Arduino)</p>
-                  <p class="cart-item-price">$99.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/113758_A2_HAY_Playing_Cards.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">HAY Playing Cards</p>
-                  <p class="cart-item-price">$10.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/110390_A2_Pixel_Worktop_Saver.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Pixel Worktop Saver</p>
-                  <p class="cart-item-price">$25.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/110387_A2_On_Color_Mug.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">On Color Mug</p>
-                  <p class="cart-item-price">$12.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-item">
-            <div class="cart-item-img" style="background-image: url('http://www.momastore.org/wcsstore/MOMASTORE1/images/products/112540_A2_DM_Tealight_Girachille_Spinner.jpg');"></div>
-            <div class="cart-item">
-              <div class="cart-item-description">
-                <span>
-                  <p class="cart-item-label">Girachille</p>
-                  <p class="cart-item-price">$28.00</p>
-                </span>
-              </div>
-              <div class="cart-item-favorites">
-                <span class="item-heart-ic"></span>
-              </div>
-              <div class="cart-item-trash">
-                <span class="item-trash-ic"></span>
-              </div>
-            </div>
-          </li>
-          <li class="cart-list-footer"></li>
-        </ul>
-      </section>
     </div>
-  </div>
-  <footer class="cart-footer">
-    <div class="cart-checkout-btn">
-      <span class="checkout-cart-ic"></span>
-      <span class="checkout-label">Checkout</span>
+    </section>
+
+    <div id="bg">
+        <img id="bkgrd" style="z-index: -1;" src="" alt="">
     </div>
-    <span class="cart-copyright">Powered by <a href="">Store</a></span>
-  </footer>
 </div>
+<!-- scroll to top -->
+<a href="#top" class="scroll-to-top page-scroll is-hidden" data-nav-status="toggle"><i class="fa fa-angle-up"></i></a>
+<!-- / scroll to top -->
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-info">© 2017 - <strong>MR</strong> - Minimal Restaurant.
+                <span class="social pull-right">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                </span>
+            </p>
+        </div><!-- / container -->
+    </footer>
+    <!-- / row -->
+    </div>
+    <!-- / container -->
 
+    <!-- / footer -->
 
+    <!-- javascript -->
+    <script src="Temp/js/jquery.min.js"></script>
+    <script src="Temp/js/bootstrap.min.js"></script>
 
+    <!-- sticky nav -->
+    <script src="Temp/js/jquery.easing.min.js"></script>
+    <script src="Temp/js/scrolling-nav-sticky.js"></script>
+    <!-- / sticky nav -->
 
-<!-- <div class="totals">
-  <div class="totals-item">
-    <label>Subtotal</label>
-    <div class="totals-value" id="cart-subtotal">71.97</div>
-  </div>
-  <div class="totals-item">
-    <label>Tax (5%)</label>
-    <div class="totals-value" id="cart-tax">3.60</div>
-  </div>
-  <div class="totals-item">
-    <label>Shipping</label>
-    <div class="totals-value" id="cart-shipping">15.00</div>
-  </div>
-  <div class="totals-item totals-item-total">
-    <label>Grand Total</label>
-    <div class="totals-value" id="cart-total">90.57</div>
-  </div>
-</div> -->
+    <!-- preloader -->
+    <script src="Temp/js/preloader.js"></script>
+    <!-- / preloader -->
 
-    <button class="checkout">Checkout</button>
+    <!-- wow -->
+    <script src="Temp/js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- / wow -->
 
-</div>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-
-
-  <script  src="js/index.js"></script>
-
-
-
-</div>
-
-<!-- hide nav -->
-<script src="Temp/js/jquery.min.js"></script>
-<script src="Temp/js/bootstrap.min.js"></script>
-<script  src="Cart/js/index.js"></script>
-<script src="Temp/js/custom.js"></script>
+    <!-- hide nav -->
+    <script src="Temp/js/hide-nav.js"></script>
+    <!-- / hide nav -->
+    <script src="Temp/js/custom.js"></script>
+    <script src="Cart/js/index.js"></script>
+    <script src="ShopCart/js/index.js"></script>
+    <!-- / javascript -->
 </body>
+
+<!-- Slick slider -->
+<script type="text/javascript" src="ordermenu/assets/js/slick.js"></script>
+<!-- Counter -->
+<script type="text/javascript" src="ordermenu/assets/js/simple-animated-counter.js"></script>
+<!-- Gallery Lightbox -->
+<script type="text/javascript" src="ordermenu/assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Date Picker -->
+<script type="text/javascript" src="ordermenu/assets/js/bootstrap-datepicker.js"></script>
+<!-- Ajax contact form  -->
+<script type="text/javascript" src="ordermenu/assets/js/app.js"></script>
+
+<!-- Custom js -->
+<script src="ordermenu/assets/js/custom.js"></script>
 
 </html>
