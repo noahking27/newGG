@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar navbar-default dark-bg page-nav navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="Order_Form.html" download>
+
+                    <button type="button" class="btn btn-lg btn-primary-filled btn-pill">
+                        <i class=""></i><b style="color: white;">Request Catering</b></button>
+                </a>
+                <!-- <a class="navbar-brand" href="Order_Form.html">
+                        <button type="button" class="btn btn-lg btn-primary-filled btn-pill">
+                            <i class=""></i><b style="color: white;">Request Catering</b></button></a>
+                </div> -->
+            </div>
+            <!-- / navbar-header -->
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Menu.html">Menu</a></li>
+                    <li><a href="testimonial.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../goodnessGraceUs/Temp/MenuJan2018/Menu.pdf">Download Menu</a></li>
+                    <li><a href="https://www.paypal.me/GoodnessGraceUs" target="_blank">Place Deposit</a></li>
+                    <div class="navbar-right">
+
+                        <div class="shopping-cart">
+                            <div class="shopping-cart-header">
+                                <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"></span>
+
+                                <div class="shopping-cart-total">
+                                    <span class="lighter-text"></span>
+                                    <span class="main-color-text total"></span>
+                                </div>
+                            </div>
+                            <!--end shopping-cart-header -->
+                            <ul class="shopping-cart-items row">
+                                <div class="addproducts"></div>
+                            </ul>
+
+                            <a href="#" class="button checkout" style="background:#bc9d4b;color: white;">Checkout <i class="fa fa-chevron-right"></i></a>
+                        </div>
+                        <!--end shopping-cart -->
+                    </div>
+                    <!--end navbar-right -->
+                    <!-- <li><a href="#" id="cart"><i class="fa fa-shopping-cart"></i> Cart <span class="badge">3</span></a></li> -->
+                </ul>
+
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+        <!-- / container -->
+    </nav>
+</header>

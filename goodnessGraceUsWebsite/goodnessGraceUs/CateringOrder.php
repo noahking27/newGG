@@ -70,10 +70,10 @@ window.print()
                 <!-- / navbar-header -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">HOME</a></li>
-                           <li><a href="Menu.html">MENU</a></li>
-                        <li><a href="TESTIMONIAL.html">TESTIMONIAL</a></li>
-                        <li><a href="CONTACT.html">CONTACT</a></li>
+                        <li><a href="index.html">Home</a></li>
+                           <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -465,7 +465,7 @@ fclose($myfile);
     <!-- footer -->
     <footer>
         <div class="container">
-            <p class="footer-info">© 2018 - <strong> </strong> - Goodness GraceUs.
+          <p class="footer-info">© <strong> </strong> Goodness GraceUs.
                 <span class="social pull-right">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>

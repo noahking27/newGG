@@ -32,7 +32,7 @@ if (empty($_POST["message"])) {
 }
 
 //Add your email here
-$EmailTo = "noahking21@gmail.com";
+$EmailTo = "Goodnessgraceuscatering@gmail.com";
 $Subject = "New Message Received Goodness GraceUs Website";
 
 // prepare email body text

@@ -2,29 +2,41 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minimal Restaurant Template">
+  <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
+  <meta name="author" content="KingStudio.ro">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Minimal Restaurant Template">
-    <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
-    <meta name="author" content="KingStudio.ro">
+  <!-- favicon -->
+  <link rel="icon" href="Temp/images/favicon.png">
+  <!-- page title -->
+  <title>Goodness GraceUs</title>
+  <!-- bootstrap css -->
+  <link href="Temp/CSSOG/bootstrap.min.css" rel="stylesheet" />
+  <!-- css -->
+  <link href="Temp/CSSOG/style.css" rel="stylesheet" />
+  <link href="Temp/CSSOG/animate.css" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+  <link href="Temp/CSSOG/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='Temp/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="Cart/css/style.css"> -->
 
-    <!-- favicon -->
-    <link rel="icon" href="Temp/images/favicon.png">
-    <!-- page title -->
-    <title>Goodness GraceUs</title>
-    <!-- bootstrap css -->
-    <link href="Temp/css/bootstrap.min.css" rel="stylesheet">
-    <!-- css -->
-    <link href="Temp/css/style.css" rel="stylesheet">
-    <link href="Temp/css/animate.css" rel="stylesheet">
-    <link href="Temp/css/bootstrap-datetimepicker.css" rel="stylesheet">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
-    <link href="Temp/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+  <!-- Slick slider
+  <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/slick.css">
+  <!-- Date Picker
+  <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/bootstrap-datepicker.css">
+  <!-- Gallery Lightbox
+  <link href="ordermenu/assets/css/magnific-popup.css" rel="stylesheet">
+  <!-- Theme color
+  <link id="switcher" href="ordermenu/assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+  <!-- Main style sheet -->
+  <!-- <link href="ordermenu/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="ShopCart/css/style.css"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -56,17 +68,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
+                    <!-- <a class="navbar-brand" href="#">
                         <button type="button" class="btn btn-lg btn-primary-filled btn-pill">
-                            <i class=""></i><b style="color: white;">ORDER HERE</b></button></a>
+                            <i class=""></i><b style="color: white;">ORDER HERE</b></button></a> -->
                 </div>
                 <!-- / navbar-header -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">HOME</a></li>
-                           <li><a href="Menu.html">MENU</a></li>
-                        <li><a href="TESTIMONIAL.html">TESTIMONIAL</a></li>
-                        <li><a href="CONTACT.html">CONTACT</a></li>
+                        <li><a href="index.html">Home</a></li>
+                           <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -115,22 +127,22 @@
                             <p>
                                 Contact Name:
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="contactName" placeholder="ENTER HERE...">
                                     </div>
                                 Phone
         #:<div class="form-group">
-            <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+            <input type="text" class="form-control" id="phone" placeholder="ENTER HERE...">
         </div>
                             </p>
                             <p>
                                 Email Address:
        <div class="form-group">
-           <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+           <input type="text" class="form-control" id="email" placeholder="ENTER HERE...">
        </div>
                             </p>
                             Estimated Attendee Count:
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="attendeeCount" placeholder="ENTER HERE...">
                                     </div>
 
                         </div>
@@ -138,31 +150,31 @@
                             <p>
                                 Date of Event:
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="dateOfEvent" placeholder="ENTER HERE...">
                                     </div>
                                 Name of Event:
         <div class="form-group">
-            <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+            <input type="text" class="form-control" id="nameOfEvent" placeholder="ENTER HERE...">
         </div>
                             </p>
                             <p>
                                 Event Location:
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="eventLocation" placeholder="ENTER HERE...">
                                     </div>
 
                             </p>
 
 <p>
       <p>
-          <strong>Check one:</strong>
+          <strong>Select one:</strong>
       </p>
 <label class="checkbox-inline">
-<input type="checkbox" value="">Drop off Only
-</label>
-<label class="checkbox-inline">
-<input type="checkbox" value="">Set Up and Serve
-</label>
+  <select id="selectBox">
+  <option value="" disabled selected>Select your option</option>
+  <option id="dropOffOnly" value="Drop Off Only">Drop Off Only</option>
+  <option id="setUpAndServe" value="Setup and Serve">Setup and Serve</option>
+</select>
 </p>
 
                         </div>
@@ -186,20 +198,20 @@
 
                                     <div class="form-group col-sm-4 reservation-left-area">
                                         Event Timing:
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="eventTiming" placeholder="ENTER HERE...">
                                     </div>
                                 </p>
                                 <p>
 
                                     <div class="form-group col-sm-4 reservation-left-area">
                                         Set-Up Time:
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="setupTime" placeholder="ENTER HERE...">
                                     </div>
                                 </p>
                                 <p>
                                     <div class="form-group col-sm-4 reservation-left-area">
                                         Guest Arrival Time:
-           <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+           <input type="text" class="form-control" id="guestArrivalTime" placeholder="ENTER HERE...">
                                     </div>
                                 </p>
 
@@ -208,24 +220,24 @@
 
                                     <div class="form-group  col-sm-6 reservation-left-area">
                                         Guest Departure Time:
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="guestDepartTime" placeholder="ENTER HERE...">
                                     </div>
 
                                     <div class="form-group col-sm-6 reservation-left-area">
                                         Food Delivery Time:
-          <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+          <input type="text" class="form-control" id="foodDeliveryTime" placeholder="ENTER HERE...">
                                     </div>
                                 </p>
                                 <p>
 
                                     <div class="form-group col-sm-6 reservation-left-area">
                                         Food Service Time – Start:
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="foodServiceTime" placeholder="ENTER HERE...">
                                     </div>
 
                                     <div class="form-group col-sm-6 reservation-left-area">
                                         End:
-                                        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+                                        <input type="text" class="form-control" id="end" placeholder="ENTER HERE...">
                                     </div>
                                 </p>
                             </div>
@@ -233,7 +245,7 @@
                             <p>
                                 Other Timing Details:
     <div class="form-group col-sm-12 reservation-left-area">
-        <input type="text" class="form-control" id="rname" placeholder="ENTER HERE...">
+        <input type="text" class="form-control" id="otherTimingDetails" placeholder="ENTER HERE...">
     </div>
                             </p>
 
@@ -245,11 +257,11 @@
                                 </strong>
                             </p>
                             <p align="center" id="content'">
-                                <strong><u>Please complete this form and return to </u></strong>
+                                <!-- <strong><u>Please complete this form and click "Submit "</u></strong>
                                 <a href="mailto:GoodnessGraceUsCatering@gmail.com">GoodnessGraceUsCatering@gmail.com<strong>. </strong>
-                                </a>
+                                </a> -->
                                 <strong>
-                                    <u>You will receive a catering quote in approx. 24-48 hours.</u>
+                                    <u>After you click "Submit Request" you will receive a catering quote in approx. 24-48 hours.</u>
                                 </strong>
                             </p>
                         </div>
@@ -259,7 +271,7 @@
 
                             <!-- / form-group -->
                             <div class="text-center">
-                                <button type="submit" class="btn btn-lg btn-primary-filled btn-form-submit btn-pill wow fadeInUp first"><i class="fa fa-calendar"></i><span><b>SUBMIT REQUEST</b></span></button>
+                                <button type="submit" id="submitOrder" class="btn btn-lg btn-primary-filled btn-form-submit btn-pill wow fadeInUp first"><i class="fa fa-calendar"></i><span><b>SUBMIT REQUEST</b></span></button>
                                 <div class="clearfix"></div>
                             </div>
                             <!-- / text-center -->
@@ -285,16 +297,13 @@
     <!-- footer -->
     <footer>
         <div class="container">
-            <p class="footer-info">© 2018 - <strong> </strong> - Goodness GraceUs.
+          <p class="footer-info">© <strong> </strong> Goodness GraceUs.
                 <span class="social pull-right">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
-            </span>
+                  <a href="https://www.facebook.com/GoodnessGraceUs/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/goodness_graceus/" target="_blank"><i class="fa fa-instagram"></i></a>
+                </span>
             </p>
-        </div>
-        <!-- / container -->
+        </div><!-- / container -->
     </footer>
     <!-- / footer -->
 
@@ -317,6 +326,11 @@
         new WOW().init();
     </script>
     <!-- / wow -->
+
+    <!-- contact-form -->
+    <script src="Temp/js/validator.min.js" type="text/javascript"></script>
+    <script src="Temp/js/cateringform-scripts.js" type="text/javascript"></script>
+    <!-- / contact-form -->
 
     <!-- date-time picker -->
     <script src="Temp/js/moment.min.js"></script>

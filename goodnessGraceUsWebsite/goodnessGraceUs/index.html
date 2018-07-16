@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 
 <head>
-      <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Minimal Restaurant Template">
-    <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
-    <meta name="author" content="KingStudio.ro">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Minimal Restaurant Template">
+  <meta name="keywords" content="responsive, retina ready, html5, css3, restaurant, food, bar, events" />
+  <meta name="author" content="KingStudio.ro">
 
-    <!-- favicon -->
-    <link rel="icon" href="Temp/images/favicon.png">
-    <!-- page title -->
-    <title>Goodness GraceUs</title>
-    <!-- bootstrap css -->
-<link href="Temp/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- css -->
-<link href="Temp/css/style.css" rel="stylesheet" />
-    <link href="Temp/css/animate.css" rel="stylesheet">
-    <!-- fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
-    <link href="Temp/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='Temp/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+  <!-- favicon -->
+  <link rel="icon" href="Temp/images/favicon.png">
+  <!-- page title -->
+  <title>Goodness GraceUs</title>
+  <!-- bootstrap css -->
+  <link href="Temp/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- css -->
+  <link href="Temp/CSSOG/style.css" rel="stylesheet" />
+  <link href="Temp/CSSOG/animate.css" rel="stylesheet">
+  <!-- fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+  <link href="Temp/CSSOG/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='Temp/fonts/FontAwesome.otf' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="Cart/css/style.css"> -->
+
+  <!-- Slick slider -->
+  <!-- <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/slick.css">
+  <!-- Date Picker
+  <link rel="stylesheet" type="text/css" href="ordermenu/assets/css/bootstrap-datepicker.css">
+  <!-- Gallery Lightbox
+  <link href="ordermenu/assets/css/magnific-popup.css" rel="stylesheet">
+  <!-- Theme color
+  <link id="switcher" href="ordermenu/assets/css/theme-color/default-theme.css" rel="stylesheet">
+
+  <!-- Main style sheet
+  <link href="ordermenu/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="ShopCart/css/style.css"> -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,8 +43,17 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<style>
+.navbar-default.dark-bg .navbar-nav > li > a {
+    color: white;
+
+}
+
+</style>
 </head>
 <body>
+  <div id="HomeBody">
  <!-- preloader -->
     <div id="preloader">
         <div class="spinner spinner-round"></div>
@@ -52,15 +75,16 @@
                 </button>
                 <a class="navbar-brand" href="Order_Form.html">
                         <button type="button" class="btn btn-lg btn-primary-filled btn-pill">
-                            <i class=""></i><b style="color: white;">REQUEST CARTERING</b></button></a>
+                            <i class=""></i><b style="color: white;">Request Catering</b></button></a>
                 </div>
                 <!-- / navbar-header -->
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="Menu.html">MENU</a></li>
-                        <li><a href="TESTIMONIAL.html">TESTIMONIAL</a></li>
-                        <li><a href="CONTACT.html">CONTACT</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Menu.html">Menu</a></li>
+                        <li><a href="testimonial.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="https://www.paypal.me/GoodnessGraceUs">Place Deposit</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -71,17 +95,14 @@
         <!-- slider -->
         <div id="slider" class="carousel slide has-top-menu dark-slider">
             <div class="carousel-inner">
-
                 <!-- slide 1 -->
                 <div class="item active slide1">
                     <div class="container">
                         <div class="carousel-caption">
                             <div class="row">
                                 <div class="col-md-12 slider-content">
-                                    <div id="logo" style="background: white;opacity: 0.8;width: 500pt;"><img style="opacity:.5" src="Temp/image/noBKlogo.png" alt="" class="animated fadeInDown first"></div>
-                                    <!-- <h1 class="slide-title fadeInUp animated second space-top-30"><span class="text-primary">Goodness</span> GraceUs<h2>
-                                    <div class="separator-line-center-2x primary-bg-color animated fadeInDown third"></div>
-                                    <p class="slide-text flipInX animated third">FOOD FROM THE HEART</p> -->
+                                    <img style="background-color: rgba(255,255,255, 0.6);box-shadow: inset 0px 0px 40px 40px rgba(255,255,255, 0.9);" src="Temp/image/noBKlogo.png" alt="" class="animated fadeInDown first">
+
                                 </div>
                                 <!-- slider-content -->
                             </div>
@@ -91,57 +112,14 @@
                     </div>
                     <!-- / container -->
                 </div>
-                <!-- / slide 1 -->
-
-                <!-- slide 2
-                <div class="item slide2">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-12 slider-content">
-                                    <img src="Temp/images/silverware.png" alt="" class="animated fadeInDown first">
-                                    <h2 class="slide-title fadeInUp animated second space-top-30"><span class="text-primary">Fresh</span> Food</h2>
-                                    <div class="separator-line-center-2x primary-bg-color animated fadeInDown third"></div>
-</div>
-                                <!-- slider-content
-                            </div>
-                            <!-- / row
-                        </div>
-                        <!-- / carousel-caption
-                    </div>
-                    <!-- / container
-                </div>
-                <!-- / slide 2 -->
-
-                <!-- slide 3
-                <div class="item slide3">
-                    <div class="container">
-                        <div class="carousel-caption">
-                            <div class="row">
-                                <div class="col-md-12 slider-content">
-                                    <img src="Temp/images/silverware.png" alt="" class="animated fadeInDown first">
-                                    <h2 class="slide-title fadeInUp animated second space-top-30"><span class="text-primary">Best</span> Desserts</h2>
-                                    <div class="separator-line-center-2x primary-bg-color animated fadeInDown third"></div>
-                                </div>
-                                <!-- slider-content
-                            </div>
-                            <!-- / row
-                        </div>
-                        <!-- / carousel-caption
-                    </div>
-                    <!-- / container
-                </div>
-                <!-- / slide 3 -->
 
             </div>
-            <!-- /carousel-inner -->
-
-            <!-- controls -->
-            <a class="left carousel-control" href="#slider" data-slide="prev"><span class="fa fa-angle-left"></span></a>
-            <a class="right carousel-control" href="#slider" data-slide="next"><span class="fa fa-angle-right"></span></a>
-            <!-- / controls -->
+            <div id="Intro_bg">
+                <img id="Intro_bkgrd" src="Temp/image/dessertpic.jpg" style="z-index: -1;" src="" alt="">
+            </div>
 
         </div>
+
         <!-- / slider-->
     </header>
     <!-- / header -->
@@ -158,15 +136,19 @@
                     <img src="Temp/images/AboutUs.jpg" alt="about">
                 </div>
                 <!-- / about-img -->
-                <div class="col-md-6 about-text wow fadeInRight first">
+                <div class="col-md-6 about-text wow fadeInRight first" style="visibility: visible; animation-name: fadeInRight;">
                     <h2 class="text-primary">Our Story</h2>
                     <div class="separator-line space-bottom text-left">&nbsp;</div>
                     <h4 class="sub-title">Welcome to <span class="text-primary">Goodness GraceUS</span></h4>
+                    <p>Larry Thompson - Larry, a Chicago native, developed a love for cooking and attended culinary arts school. He is also certified in resturaunt management, catering and gormet cooking. Larry and Victoria fell in love in 2004 and began blending their cooking styles.
+                    </p>
+                    <p>Victoria Thompson - Victoria is a down home country girl who has a lineage of restaurant owners and cooks on both sides of her family. She began cooking at the age of 8 and continues to develop flavors and recipes.</p>
+
                     <p>Our mission is to bring our combined style, flavor and uniqueness together to deliver high quality food for the world to enjoy.
                         Each catering is unique, therefore our style of custom catering meets the needs of each individual event.</p>
                     <blockquote class="space-top">
                         <p> When you eat our food, we want you to feel like it was prepared just for you, from the heart. The flavors should make you say....Goodness GraceUs!!</p>
-                        <cite>-Larry and Victoria</cite>
+                        <cite>- Larry and Victoria</cite>
                     </blockquote>
                 </div>
                 <!-- / about-text -->
@@ -174,6 +156,8 @@
             <!-- / row -->
             <!-- / row -->
         </div>
+
+
         <!-- / container -->
     </section>
 
@@ -185,19 +169,19 @@
     <!-- footer -->
     <footer>
         <div class="container">
-            <p class="footer-info">© 2018 - <strong> </strong> - Goodness GraceUs.
+            <p class="footer-info">© <strong> </strong> Goodness GraceUs.
                 <span class="social pull-right">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-pinterest"></i></a>
+                  <a href="https://www.facebook.com/GoodnessGraceUs/" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/goodness_graceus/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <!-- <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-pinterest"></i></a> -->
             </span>
             </p>
         </div>
         <!-- / container -->
     </footer>
     <!-- / footer -->
-
+</div>
     <!-- javascript -->
     <script src="Temp/js/jquery.min.js"></script>
     <script src="Temp/js/bootstrap.min.js"></script>

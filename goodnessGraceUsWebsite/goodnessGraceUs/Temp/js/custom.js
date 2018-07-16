@@ -183,9 +183,9 @@ $.each(lines, function(n, urlRecord) {
     if (urlRecord.includes('%') && urlRecord !== "") {
       var idNames = urlRecord
       console.log(idNames)
-
+// tab-content
       currentHeader = urlRecord.substring(1, 4)
-      $('.mu-restaurant-menu').append('<li id=\"' + urlRecord.substring(1, 4) + '\" class=\"listItem\"><a href=\"#' + urlRecord.substring(1, 4) + '\" data-toggle=\"tab\">' + urlRecord.substring(1) + '</a></li>');
+      $('.mu-restaurant-menu').append('<li id=\"' + urlRecord.substring(1, 4) + '\" class=\"listItem\"><a href=\"#tab-content\" data-toggle=\"tab\">' + urlRecord.substring(1) + '</a></li>');
       count++;
       if (count == 1){
        $('#CategoryHeaders').append('<div class=\"tab-pane fade in hidden\" id=\"' + urlRecord.substring(1, 4) + '\"><div class=\"mu-tab-content-area\"><div class=\"row '+ currentHeader +'\">');
@@ -208,7 +208,7 @@ $.each(lines, function(n, urlRecord) {
                   var start = urlRecord.length - des
                   var title = urlRecord.substring(0, des - 2)
                   var classname = '.' + currentHeader +'';
-                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 85%;\"> <div class=\"media\"> <div class=\"media-left\"><button id="' + urlRecord + '" type=\"Button\" class=\"media-object btn btn-success\">ADD</button></div><div class=\"media-body media-middle\"> <h4 class=\"media-heading\"><a href=\"#\">' + title + '</a></h4><p style=\"color:white\">' + urlRecord.substring(des) + '</p></div></div></li></ul> </div></div>');
+                     $(classname).append('<div class=\"col-md-6\"> <div class=\"mu-tab-content-left\"> <ul class=\"mu-menu-item-nav\"> <li style=\"border-bottom: 1px dashed #ccc;display: inline;float: left;margin-bottom: 20px;padding-bottom: 15px;width: 85%;\"> <div class=\"media\"><div class=\"media-body media-middle\"> <h4 class=\"media-heading\"><a href=\"#\">' + title + '</a></h4><p style=\"color:white\">' + urlRecord.substring(des) + '</p></div></div></li></ul> </div></div>');
 
                 }
 
@@ -239,40 +239,40 @@ $(document).on('click', '.listItem', function(event) {
 console.log($('.listItem').index(this))
 switch ($('.listItem').index(this)) {
     case 0:
-        $('#bkgrd').attr("src","Temp/Image/bread.jpg");
+        $('#bkgrd').attr("src","Temp/image/bread.jpg");
         break;
     case 1:
-        $('#bkgrd').attr("src","Temp/Image/soup.jpg");
+        $('#bkgrd').attr("src","Temp/image/soup.jpg");
         break;
     case 2:
-        $('#bkgrd').attr("src","Temp/Image/brocoli.jpg");
+        $('#bkgrd').attr("src","Temp/image/salad.jpg");
         break;
     case 3:
-        $('#bkgrd').attr("src","Temp/Image/freshberry.jpg");
+        $('#bkgrd').attr("src","Temp/image/freshfruit.jpg");
         break;
     case 4:
-        $('#bkgrd').attr("src","Temp/Image/greenbeans.jpg");
+        $('#bkgrd').attr("src","Temp/image/greenbeans.jpg");
         break;
     case 5:
-        $('#bkgrd').attr("src","Temp/Image/Pasta.jpg");
+        $('#bkgrd').attr("src","Temp/image/Pasta.jpg");
         break;
     case 6:
-        $('#bkgrd').attr("src","Temp/Image/chicken.jpg");
+        $('#bkgrd').attr("src","Temp/image/chicken.jpg");
         break;
     case 7:
-        $('#bkgrd').attr("src","Temp/Image/salmon.jpg");
+        $('#bkgrd').attr("src","Temp/image/salmon2.jpg");
         break;
     case 8:
-        $('#bkgrd').attr("src","Temp/Image/dessertpic.jpg");
+        $('#bkgrd').attr("src","Temp/image/dessertpic.jpg");
         break;
     case 9:
-        $('#bkgrd').attr("src","Temp/Image/bread.jpg");
+        $('#bkgrd').attr("src","Temp/image/bread.jpg");
         break;
     case 10:
-          $('#bkgrd').attr("src","Temp/Image/drink.jpg");
+          $('#bkgrd').attr("src","Temp/image/drink.jpg");
           break;
     case 11:
-          $('#bkgrd').attr("src","Temp/Image/buffet.jpg");
+          $('#bkgrd').attr("src","Temp/image/buffet.jpg");
           break;
       }
 

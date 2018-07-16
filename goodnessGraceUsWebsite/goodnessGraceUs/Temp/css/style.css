@@ -29,6 +29,7 @@ h4, h5, h6 {
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-top: 0;
+
 }
 
 h1 {
@@ -1932,21 +1933,28 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-color: #192e44;
+  /* background-color: #192e44; */
 }
 
+/* .item {
+  background-color: white;
+  opacity: .9;
+  color: #bc9d4b;
+} */
 #slider.dark .item, #slider .item.dark {
   background-color: #222222;
 }
 
-#slider .slide1 {
-  background-image: url("../image/Pasta.jpg");
-  /*filter: brightness(50%);
-  opacity: .8;*/
+/* #slider .slide1 {
+  background-image: url("../image/dessertpic.jpg");
+  /* filter: brightness(50%);
+  opacity: .8;
   display: block;
   width: auto;
   height: auto;
-}
+  /* min-width: 50%;
+  min-height: 65%;
+} */
 
 #slider .slide2 {
   background-image: url("../images/chicken.jpg");
@@ -2388,11 +2396,11 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* End Forms Style */
 /* End Reservations Section */
 /* Testimonials Slider */
-#testimonials {
-  background: url("../images/testimonials-bg.jpg") no-repeat center;
+/* #testimonials {
+  background: url("../image/praline.jpg") no-repeat center;
   background-size: cover;
   background-color: #192e44;
-}
+} */
 
 #testimonials .testimonial {
   padding-top: 50px;
@@ -2415,13 +2423,14 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 }
 
 #testimonials .testimonial h3 {
-  color: #ebebeb;
+  color: white;
   font-size: 30px;
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px;
   max-width: 900px;
+  font-family: initial;
 }
 
 .customer-name {
@@ -2455,7 +2464,7 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 /* Contact Section */
 #contact {
   background-color: #192e44 !important;
-  height: 90%;
+  height: 100%;
 }
 
 /* Maps */
@@ -2500,7 +2509,12 @@ table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table
 footer {
   background: #192e44;
   border-top: 1px solid #bc9d4b;
-  height: 10%;
+  height: 11%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .footer-info {
@@ -2799,6 +2813,8 @@ footer p {
 
   #slider .item {
     min-height: 580px;
+    opacity: .9;
+    padding: 10%;
   }
 
   #reservation-form {
@@ -2989,7 +3005,33 @@ footer p {
   bottom: 0;
   margin: auto;
   min-width: 50%;
-  min-height: 50%;
+  min-height: 65%;
+  filter: brightness(50%);
+  opacity: 0.8;
+  display: block;
+  /*max-width:230px;*/
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+
+#Intro_bg {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 182%;
+  z-index: -1;
+}
+#Intro_bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 65%;
   filter: brightness(50%);
   opacity: 0.8;
   display: block;
